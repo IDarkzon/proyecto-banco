@@ -209,6 +209,7 @@
             optPasaporte.TabIndex = 2;
             optPasaporte.Text = "Pasaporte";
             optPasaporte.UseVisualStyleBackColor = true;
+            optPasaporte.CheckedChanged += DetectarDocumento;
             // 
             // optCarnet
             // 
@@ -219,6 +220,7 @@
             optCarnet.TabIndex = 1;
             optCarnet.Text = "Carnet de Extranjería";
             optCarnet.UseVisualStyleBackColor = true;
+            optCarnet.CheckedChanged += DetectarDocumento;
             // 
             // optDNI
             // 
@@ -231,6 +233,7 @@
             optDNI.TabStop = true;
             optDNI.Text = "DNI";
             optDNI.UseVisualStyleBackColor = true;
+            optDNI.CheckedChanged += DetectarDocumento;
             // 
             // btnGuardar
             // 
