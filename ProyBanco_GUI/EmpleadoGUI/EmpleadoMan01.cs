@@ -71,7 +71,7 @@ namespace ProyBanco_GUI.EmpleadoGUI
                 frmEmpleadoMan.ShowDialog();
 
                 CargarDatos(txtFiltro.Text.Trim());
-            } 
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
@@ -88,6 +88,6 @@ namespace ProyBanco_GUI.EmpleadoGUI
             this.Close();
         }
 
-        
+
     }
 }

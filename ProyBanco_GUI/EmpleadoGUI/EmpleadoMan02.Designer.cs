@@ -77,6 +77,9 @@
             btnSalir.TabIndex = 56;
             btnSalir.Text = "X";
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnCerrar_Click;
+            btnSalir.MouseEnter += btnSalir_MouseEnter;
+            btnSalir.MouseLeave += btnSalir_MouseLeave;
             // 
             // lblTitulo
             // 

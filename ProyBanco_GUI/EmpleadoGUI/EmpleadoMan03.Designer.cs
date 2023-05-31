@@ -136,6 +136,9 @@
             btnSalir.TabIndex = 60;
             btnSalir.Text = "X";
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnCerrar_Click;
+            btnSalir.MouseEnter += btnSalir_MouseEnter;
+            btnSalir.MouseLeave += btnSalir_MouseLeave;
             // 
             // lblTitulo
             // 
@@ -402,6 +405,7 @@
             Controls.Add(lblDocumento);
             FormBorderStyle = FormBorderStyle.None;
             Name = "EmpleadoMan03";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Editar Empleado";
             Load += EmpleadoMan03_Load;
             groupBox1.ResumeLayout(false);

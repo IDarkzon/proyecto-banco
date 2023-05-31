@@ -272,5 +272,19 @@ namespace ProyBanco_GUI.EmpleadoGUI
         {
             this.Close();
         }
+
+        #region Configuración estética
+
+        private void btnSalir_MouseLeave(object sender, EventArgs e)
+        {
+            btnSalir.ForeColor = Color.Black;
+        }
+
+        private void btnSalir_MouseEnter(object sender, EventArgs e)
+        {
+            btnSalir.ForeColor = Color.Red;
+        }
+
+        #endregion
     }
 }

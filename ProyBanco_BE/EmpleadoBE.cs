@@ -16,7 +16,7 @@ namespace ProyBanco_BE
         public String Ape_mat_Emp { get; set; }
         public String Tel_Emp { get; set; }
         public String Cor_Emp { get; set; }
-        public Byte Img_Emp { get; set; }
+        public Byte[] Img_Emp { get; set; }
         public String Id_Ubigeo { get; set; }
         public Int16 Est_Emp { get; set; }
         public String Usu_Registro { get; set; }

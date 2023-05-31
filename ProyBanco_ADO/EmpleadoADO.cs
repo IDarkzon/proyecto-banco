@@ -36,7 +36,8 @@ namespace ProyBanco_ADO
             catch (SqlException ex)
             {
                 throw new Exception(ex.Message);
-            }
+            }   
+
         }
 
         public EmpleadoBE ConsultarEmpleado(String strCodigo)
@@ -68,7 +69,7 @@ namespace ProyBanco_ADO
                     objEmpleadoBE.Cor_Emp = dtr["Correo"].ToString();
                     objEmpleadoBE.Img_Emp = 1; // Pendiente
                     objEmpleadoBE.Id_Ubigeo = dtr["Id_Ubigeo"].ToString();
-                    objEmpleadoBE.Est_Emp = Convert.ToInt16(dtr["Estado"].ToString());
+                    //objEmpleadoBE.Est_Emp = Convert.ToInt16(dtr["Estado"].ToString());
                 }
                 dtr.Close();
                 return objEmpleadoBE;
