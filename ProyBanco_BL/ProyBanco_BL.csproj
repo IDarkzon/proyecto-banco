@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProyBanco_ADO\ProyBanco_ADO.csproj" />
+    <ProjectReference Include="..\ProyBanco_BE\ProyBanco_BE.csproj" />
+  </ItemGroup>
+
+</Project>
