@@ -1,6 +1,6 @@
 ﻿namespace ProyBanco_GUI.EmpleadoGUI
 {
-    partial class EmpleadoMan02
+    partial class EmpleadoMan03
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnSalir = new Button();
-            lblTitulo = new Label();
-            chkActivo = new CheckBox();
             cboDepartamento = new ComboBox();
             cboProvincia = new ComboBox();
             cboDistrito = new ComboBox();
             lblDistrito = new Label();
             lblDepartamento = new Label();
             lblProvincia = new Label();
+            btnSalir = new Button();
+            lblTitulo = new Label();
+            lblCodigoIng = new Label();
+            lblCodigo = new Label();
+            chkActivo = new CheckBox();
             txtDocumento = new TextBox();
             groupBox1 = new GroupBox();
             optPasaporte = new RadioButton();
@@ -55,11 +57,68 @@
             txtNombre = new TextBox();
             lblNombre = new Label();
             lblDocumento = new Label();
-            pbFoto = new PictureBox();
             btnFoto = new Button();
+            pbFoto = new PictureBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             SuspendLayout();
+            // 
+            // cboDepartamento
+            // 
+            cboDepartamento.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboDepartamento.FormattingEnabled = true;
+            cboDepartamento.Location = new Point(38, 333);
+            cboDepartamento.Name = "cboDepartamento";
+            cboDepartamento.Size = new Size(225, 23);
+            cboDepartamento.TabIndex = 64;
+            cboDepartamento.SelectionChangeCommitted += cboDepartamento_SelectionChangeCommitted;
+            // 
+            // cboProvincia
+            // 
+            cboProvincia.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboProvincia.FormattingEnabled = true;
+            cboProvincia.Location = new Point(282, 333);
+            cboProvincia.Name = "cboProvincia";
+            cboProvincia.Size = new Size(225, 23);
+            cboProvincia.TabIndex = 65;
+            cboProvincia.SelectionChangeCommitted += cboProvincia_SelectionChangeCommitted;
+            // 
+            // cboDistrito
+            // 
+            cboDistrito.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboDistrito.FormattingEnabled = true;
+            cboDistrito.Location = new Point(528, 333);
+            cboDistrito.Name = "cboDistrito";
+            cboDistrito.Size = new Size(225, 23);
+            cboDistrito.TabIndex = 66;
+            // 
+            // lblDistrito
+            // 
+            lblDistrito.AutoSize = true;
+            lblDistrito.Location = new Point(528, 315);
+            lblDistrito.Name = "lblDistrito";
+            lblDistrito.Size = new Size(48, 15);
+            lblDistrito.TabIndex = 63;
+            lblDistrito.Text = "Distrito:";
+            // 
+            // lblDepartamento
+            // 
+            lblDepartamento.AutoSize = true;
+            lblDepartamento.Location = new Point(35, 315);
+            lblDepartamento.Margin = new Padding(3, 0, 3, 3);
+            lblDepartamento.Name = "lblDepartamento";
+            lblDepartamento.Size = new Size(86, 15);
+            lblDepartamento.TabIndex = 61;
+            lblDepartamento.Text = "Departamento:";
+            // 
+            // lblProvincia
+            // 
+            lblProvincia.AutoSize = true;
+            lblProvincia.Location = new Point(282, 315);
+            lblProvincia.Name = "lblProvincia";
+            lblProvincia.Size = new Size(59, 15);
+            lblProvincia.TabIndex = 62;
+            lblProvincia.Text = "Provincia:";
             // 
             // btnSalir
             // 
@@ -70,11 +129,11 @@
             btnSalir.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Font = new Font("Arial Black", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSalir.Location = new Point(724, 30);
+            btnSalir.Location = new Point(725, 20);
             btnSalir.Margin = new Padding(0);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(42, 39);
-            btnSalir.TabIndex = 56;
+            btnSalir.TabIndex = 60;
             btnSalir.Text = "X";
             btnSalir.UseVisualStyleBackColor = false;
             // 
@@ -82,97 +141,59 @@
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitulo.Location = new Point(34, 33);
+            lblTitulo.Location = new Point(34, 23);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(181, 30);
-            lblTitulo.TabIndex = 29;
-            lblTitulo.Text = "Nuevo Empleado";
+            lblTitulo.Size = new Size(173, 30);
+            lblTitulo.TabIndex = 37;
+            lblTitulo.Text = "Editar Empleado";
+            // 
+            // lblCodigoIng
+            // 
+            lblCodigoIng.BackColor = SystemColors.ControlDark;
+            lblCodigoIng.BorderStyle = BorderStyle.FixedSingle;
+            lblCodigoIng.Location = new Point(92, 69);
+            lblCodigoIng.Name = "lblCodigoIng";
+            lblCodigoIng.Size = new Size(51, 23);
+            lblCodigoIng.TabIndex = 39;
+            lblCodigoIng.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblCodigo
+            // 
+            lblCodigo.AutoSize = true;
+            lblCodigo.Location = new Point(37, 73);
+            lblCodigo.Name = "lblCodigo";
+            lblCodigo.Size = new Size(49, 15);
+            lblCodigo.TabIndex = 38;
+            lblCodigo.Text = "Código:";
             // 
             // chkActivo
             // 
             chkActivo.AutoSize = true;
-            chkActivo.Location = new Point(36, 350);
+            chkActivo.Location = new Point(37, 375);
             chkActivo.Name = "chkActivo";
             chkActivo.Size = new Size(60, 19);
-            chkActivo.TabIndex = 53;
+            chkActivo.TabIndex = 57;
             chkActivo.Text = "Activo";
             chkActivo.UseVisualStyleBackColor = true;
             // 
-            // cboDepartamento
-            // 
-            cboDepartamento.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboDepartamento.FormattingEnabled = true;
-            cboDepartamento.Location = new Point(37, 307);
-            cboDepartamento.Name = "cboDepartamento";
-            cboDepartamento.Size = new Size(225, 23);
-            cboDepartamento.TabIndex = 52;
-            cboDepartamento.SelectionChangeCommitted += cboDepartamento_SelectionChangeCommitted;
-            // 
-            // cboProvincia
-            // 
-            cboProvincia.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboProvincia.FormattingEnabled = true;
-            cboProvincia.Location = new Point(281, 307);
-            cboProvincia.Name = "cboProvincia";
-            cboProvincia.Size = new Size(225, 23);
-            cboProvincia.TabIndex = 51;
-            cboProvincia.SelectionChangeCommitted += cboProvincia_SelectionChangeCommitted;
-            // 
-            // cboDistrito
-            // 
-            cboDistrito.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboDistrito.FormattingEnabled = true;
-            cboDistrito.Location = new Point(527, 307);
-            cboDistrito.Name = "cboDistrito";
-            cboDistrito.Size = new Size(225, 23);
-            cboDistrito.TabIndex = 50;
-            // 
-            // lblDistrito
-            // 
-            lblDistrito.AutoSize = true;
-            lblDistrito.Location = new Point(527, 289);
-            lblDistrito.Name = "lblDistrito";
-            lblDistrito.Size = new Size(48, 15);
-            lblDistrito.TabIndex = 49;
-            lblDistrito.Text = "Distrito:";
-            // 
-            // lblDepartamento
-            // 
-            lblDepartamento.AutoSize = true;
-            lblDepartamento.Location = new Point(34, 289);
-            lblDepartamento.Margin = new Padding(3, 0, 3, 3);
-            lblDepartamento.Name = "lblDepartamento";
-            lblDepartamento.Size = new Size(86, 15);
-            lblDepartamento.TabIndex = 47;
-            lblDepartamento.Text = "Departamento:";
-            // 
-            // lblProvincia
-            // 
-            lblProvincia.AutoSize = true;
-            lblProvincia.Location = new Point(281, 289);
-            lblProvincia.Name = "lblProvincia";
-            lblProvincia.Size = new Size(59, 15);
-            lblProvincia.TabIndex = 48;
-            lblProvincia.Text = "Provincia:";
-            // 
             // txtDocumento
             // 
-            txtDocumento.Location = new Point(112, 245);
+            txtDocumento.Location = new Point(113, 270);
             txtDocumento.MaxLength = 8;
             txtDocumento.Name = "txtDocumento";
             txtDocumento.PlaceholderText = "Ingrese el Documento";
             txtDocumento.Size = new Size(150, 23);
-            txtDocumento.TabIndex = 46;
+            txtDocumento.TabIndex = 56;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(optPasaporte);
             groupBox1.Controls.Add(optCarnet);
             groupBox1.Controls.Add(optDNI);
-            groupBox1.Location = new Point(281, 151);
+            groupBox1.Location = new Point(282, 176);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(226, 117);
-            groupBox1.TabIndex = 42;
+            groupBox1.TabIndex = 52;
             groupBox1.TabStop = false;
             groupBox1.Text = "Tipo de Documento";
             // 
@@ -210,142 +231,142 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(573, 397);
+            btnGuardar.Location = new Point(574, 407);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(75, 23);
-            btnGuardar.TabIndex = 54;
+            btnGuardar.TabIndex = 58;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
             // 
             // btnCerrar
             // 
-            btnCerrar.Location = new Point(677, 397);
+            btnCerrar.Location = new Point(678, 407);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(75, 23);
-            btnCerrar.TabIndex = 55;
+            btnCerrar.TabIndex = 59;
             btnCerrar.Text = "Cerrar";
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click;
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(112, 195);
+            txtCorreo.Location = new Point(113, 220);
             txtCorreo.MaxLength = 50;
             txtCorreo.Name = "txtCorreo";
             txtCorreo.PlaceholderText = "Ingrese el Correo";
             txtCorreo.Size = new Size(150, 23);
-            txtCorreo.TabIndex = 39;
+            txtCorreo.TabIndex = 49;
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(112, 151);
+            txtTelefono.Location = new Point(113, 176);
             txtTelefono.MaxLength = 9;
             txtTelefono.Name = "txtTelefono";
             txtTelefono.PlaceholderText = "Ingrese el Teléfono";
             txtTelefono.Size = new Size(150, 23);
-            txtTelefono.TabIndex = 37;
+            txtTelefono.TabIndex = 47;
             // 
             // lblCorreo
             // 
             lblCorreo.AutoSize = true;
-            lblCorreo.Location = new Point(34, 198);
+            lblCorreo.Location = new Point(35, 223);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(46, 15);
-            lblCorreo.TabIndex = 38;
+            lblCorreo.TabIndex = 48;
             lblCorreo.Text = "Correo:";
             // 
             // lblTelefono
             // 
             lblTelefono.AutoSize = true;
-            lblTelefono.Location = new Point(34, 154);
+            lblTelefono.Location = new Point(35, 179);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(55, 15);
-            lblTelefono.TabIndex = 36;
+            lblTelefono.TabIndex = 46;
             lblTelefono.Text = "Teléfono:";
             // 
             // txtApellidoM
             // 
-            txtApellidoM.Location = new Point(526, 96);
+            txtApellidoM.Location = new Point(527, 121);
             txtApellidoM.MaxLength = 20;
             txtApellidoM.Name = "txtApellidoM";
             txtApellidoM.PlaceholderText = "Ingrese el Apellido Materno";
             txtApellidoM.Size = new Size(226, 23);
-            txtApellidoM.TabIndex = 35;
+            txtApellidoM.TabIndex = 45;
             // 
             // lblApellidoM
             // 
             lblApellidoM.AutoSize = true;
-            lblApellidoM.Location = new Point(525, 78);
+            lblApellidoM.Location = new Point(526, 103);
             lblApellidoM.Name = "lblApellidoM";
             lblApellidoM.Size = new Size(102, 15);
-            lblApellidoM.TabIndex = 34;
+            lblApellidoM.TabIndex = 44;
             lblApellidoM.Text = "Apellido Materno:";
             // 
             // txtApellidoP
             // 
-            txtApellidoP.Location = new Point(281, 96);
+            txtApellidoP.Location = new Point(282, 121);
             txtApellidoP.MaxLength = 20;
             txtApellidoP.Name = "txtApellidoP";
             txtApellidoP.PlaceholderText = "Ingrese el Apellido Paterno";
             txtApellidoP.Size = new Size(226, 23);
-            txtApellidoP.TabIndex = 33;
+            txtApellidoP.TabIndex = 43;
             // 
             // lblApellidoP
             // 
             lblApellidoP.AutoSize = true;
-            lblApellidoP.Location = new Point(281, 78);
+            lblApellidoP.Location = new Point(282, 103);
             lblApellidoP.Name = "lblApellidoP";
             lblApellidoP.Size = new Size(98, 15);
-            lblApellidoP.TabIndex = 32;
+            lblApellidoP.TabIndex = 42;
             lblApellidoP.Text = "Apellido Paterno:";
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(36, 96);
+            txtNombre.Location = new Point(37, 121);
             txtNombre.MaxLength = 40;
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Ingrese el Nombre";
             txtNombre.Size = new Size(226, 23);
-            txtNombre.TabIndex = 31;
+            txtNombre.TabIndex = 41;
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(34, 78);
+            lblNombre.Location = new Point(35, 103);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(54, 15);
-            lblNombre.TabIndex = 30;
+            lblNombre.TabIndex = 40;
             lblNombre.Text = "Nombre:";
             // 
             // lblDocumento
             // 
             lblDocumento.AutoSize = true;
-            lblDocumento.Location = new Point(34, 248);
+            lblDocumento.Location = new Point(35, 273);
             lblDocumento.Name = "lblDocumento";
-            lblDocumento.Size = new Size(76, 15);
-            lblDocumento.TabIndex = 45;
-            lblDocumento.Text = "Documento: ";
-            // 
-            // pbFoto
-            // 
-            pbFoto.Location = new Point(624, 154);
-            pbFoto.Name = "pbFoto";
-            pbFoto.Size = new Size(128, 114);
-            pbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbFoto.TabIndex = 57;
-            pbFoto.TabStop = false;
+            lblDocumento.Size = new Size(73, 15);
+            lblDocumento.TabIndex = 55;
+            lblDocumento.Text = "Documento:";
             // 
             // btnFoto
             // 
-            btnFoto.Location = new Point(527, 203);
+            btnFoto.Location = new Point(528, 228);
             btnFoto.Name = "btnFoto";
             btnFoto.Size = new Size(79, 23);
-            btnFoto.TabIndex = 58;
+            btnFoto.TabIndex = 68;
             btnFoto.Text = "Cargar Foto";
             btnFoto.UseVisualStyleBackColor = true;
             // 
-            // EmpleadoMan02
+            // pbFoto
+            // 
+            pbFoto.Location = new Point(625, 179);
+            pbFoto.Name = "pbFoto";
+            pbFoto.Size = new Size(128, 114);
+            pbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbFoto.TabIndex = 67;
+            pbFoto.TabStop = false;
+            // 
+            // EmpleadoMan03
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -353,15 +374,17 @@
             ControlBox = false;
             Controls.Add(btnFoto);
             Controls.Add(pbFoto);
-            Controls.Add(btnSalir);
-            Controls.Add(lblTitulo);
-            Controls.Add(chkActivo);
             Controls.Add(cboDepartamento);
             Controls.Add(cboProvincia);
             Controls.Add(cboDistrito);
             Controls.Add(lblDistrito);
             Controls.Add(lblDepartamento);
             Controls.Add(lblProvincia);
+            Controls.Add(btnSalir);
+            Controls.Add(lblTitulo);
+            Controls.Add(lblCodigoIng);
+            Controls.Add(lblCodigo);
+            Controls.Add(chkActivo);
             Controls.Add(txtDocumento);
             Controls.Add(groupBox1);
             Controls.Add(btnGuardar);
@@ -378,10 +401,9 @@
             Controls.Add(lblNombre);
             Controls.Add(lblDocumento);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "EmpleadoMan02";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Nuevo Empleado";
-            Load += EmpleadoMan02_Load;
+            Name = "EmpleadoMan03";
+            Text = "Editar Empleado";
+            Load += EmpleadoMan03_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
@@ -391,15 +413,17 @@
 
         #endregion
 
-        private Button btnSalir;
-        private Label lblTitulo;
-        private CheckBox chkActivo;
         private ComboBox cboDepartamento;
         private ComboBox cboProvincia;
         private ComboBox cboDistrito;
         private Label lblDistrito;
         private Label lblDepartamento;
         private Label lblProvincia;
+        private Button btnSalir;
+        private Label lblTitulo;
+        private Label lblCodigoIng;
+        private Label lblCodigo;
+        private CheckBox chkActivo;
         private TextBox txtDocumento;
         private GroupBox groupBox1;
         private RadioButton optPasaporte;
@@ -418,7 +442,7 @@
         private TextBox txtNombre;
         private Label lblNombre;
         private Label lblDocumento;
-        private PictureBox pbFoto;
         private Button btnFoto;
+        private PictureBox pbFoto;
     }
 }

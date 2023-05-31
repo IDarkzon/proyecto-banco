@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,17 +14,20 @@ using ProyBanco_BL;
 
 namespace ProyBanco_GUI.EmpleadoGUI
 {
-    public partial class EmpleadoMan02 : Form
+    public partial class EmpleadoMan03 : Form
     {
         EmpleadoBE objEmpleadoBE = new EmpleadoBE();
+        EmpleadoBE objEmpleadoBE_Temp = new EmpleadoBE();
         EmpleadoBL objEmpleadoBL = new EmpleadoBL();
 
-        public EmpleadoMan02()
+        public EmpleadoMan03()
         {
             InitializeComponent();
         }
 
-        private void EmpleadoMan02_Load(object sender, EventArgs e)
+        public String Codigo { get; set; }
+
+        private void EmpleadoMan03_Load(object sender, EventArgs e)
         {
             try
             {
@@ -35,6 +37,34 @@ namespace ProyBanco_GUI.EmpleadoGUI
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
+            // Mostrar datos del empleado
+            objEmpleadoBE = objEmpleadoBL.ConsultarEmpleado(Codigo);
+            objEmpleadoBE_Temp = objEmpleadoBL.ConsultarEmpleado(Codigo);
+
+            lblCodigoIng.Text = objEmpleadoBE.Cod_Emp;
+            txtNombre.Text = objEmpleadoBE.Nom_Emp;
+            txtApellidoP.Text = objEmpleadoBE.Ape_pat_Emp;
+            txtApellidoM.Text = objEmpleadoBE.Ape_mat_Emp;
+            txtTelefono.Text = objEmpleadoBE.Tel_Emp;
+            txtCorreo.Text = objEmpleadoBE.Cor_Emp;
+            txtDocumento.Text = objEmpleadoBE.Num_doc_Emp;
+            switch (objEmpleadoBE.Tip_doc_Emp)
+            {
+                case 1:
+                    optDNI.Checked = true;
+                    break;
+                case 2:
+                    optCarnet.Checked = true;
+                    break;
+                case 3:
+                    optPasaporte.Checked = true;
+                    break;
+            }
+
+            String Id_Ubigeo = objEmpleadoBE.Id_Ubigeo;
+            CargarUbigeo(Id_Ubigeo.Substring(0, 2), Id_Ubigeo.Substring(2, 2), Id_Ubigeo.Substring(4, 2));
+            chkActivo.Checked = Convert.ToBoolean(objEmpleadoBE.Est_Emp);
         }
 
         private void CargarUbigeo(String IdDepa, String IdProv, String IdDist)
@@ -57,7 +87,6 @@ namespace ProyBanco_GUI.EmpleadoGUI
             cboDistrito.SelectedValue = IdDist;
         }
 
-        // Función general para detectar números
         private void DetectarNumeros(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != 8)
@@ -91,6 +120,31 @@ namespace ProyBanco_GUI.EmpleadoGUI
             bool esValido = Regex.IsMatch(strCorreo, patron);
 
             return esValido;
+        }
+
+        // Función que evita que se hagan falsas modificaciones
+        private bool VerificarCambios(Int16 tipoDocumento)
+        {
+            String Id_Ubigeo = cboDepartamento.SelectedValue.ToString() +
+                    cboProvincia.SelectedValue.ToString() +
+                    cboDistrito.SelectedValue.ToString();
+
+            if (txtNombre.Text.Trim() != objEmpleadoBE_Temp.Nom_Emp ||
+                    txtApellidoP.Text.Trim() != objEmpleadoBE_Temp.Ape_pat_Emp ||
+                    txtApellidoM.Text.Trim() != objEmpleadoBE_Temp.Ape_mat_Emp ||
+                    txtTelefono.Text.Trim() != objEmpleadoBE_Temp.Tel_Emp ||
+                    txtCorreo.Text.Trim() != objEmpleadoBE_Temp.Cor_Emp ||
+                    txtDocumento.Text.Trim() != objEmpleadoBE_Temp.Num_doc_Emp ||
+                    tipoDocumento != objEmpleadoBE_Temp.Tip_doc_Emp ||
+                    Id_Ubigeo != objEmpleadoBE_Temp.Id_Ubigeo ||
+                    Convert.ToInt16(chkActivo.Checked) != objEmpleadoBE_Temp.Est_Emp)
+            {
+                // Hay cambios
+                return false;
+            }
+
+            // No hay cambios
+            return true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -167,6 +221,11 @@ namespace ProyBanco_GUI.EmpleadoGUI
                 else
                 {
                     tipoDocumento = 3;
+                }
+
+                if (VerificarCambios(tipoDocumento))
+                {
+                    throw new Exception("No se ha hecho ningún cambio.");
                 }
 
                 // Insertamos

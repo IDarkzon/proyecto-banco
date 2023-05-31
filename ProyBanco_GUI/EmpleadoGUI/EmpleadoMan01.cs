@@ -49,7 +49,17 @@ namespace ProyBanco_GUI.EmpleadoGUI
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                EmpleadoMan02 frmEmpleadoMan = new EmpleadoMan02();
+                frmEmpleadoMan.ShowDialog();
+
+                CargarDatos(txtFiltro.Text.Trim());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void dtgDatos_DoubleClick(object sender, EventArgs e)
