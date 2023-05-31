@@ -80,7 +80,7 @@ namespace ProyBanco_GUI
         private void MDIPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult vrpta;
-            vrpta = MessageBox.Show("Estás seguro de que quieres salir?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            vrpta = MessageBox.Show("¿Estás seguro que quieres salir del aplicativo?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (vrpta == DialogResult.No)
             {
                 e.Cancel = true;
@@ -91,6 +91,21 @@ namespace ProyBanco_GUI
         {
             Timer.Enabled = false;
             Application.Exit();
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = this.MdiChildren.FirstOrDefault(x => x is EmpleadoGUI.EmpleadoMan01);
+
+            if (frm != null)
+            {
+                frm.BringToFront();
+                return;
+            }
+
+            EmpleadoGUI.EmpleadoMan01 frmClienteMan = new EmpleadoGUI.EmpleadoMan01();
+            frmClienteMan.MdiParent = this;
+            frmClienteMan.Show();
         }
     }
 }

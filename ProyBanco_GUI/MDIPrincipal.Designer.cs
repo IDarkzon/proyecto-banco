@@ -33,12 +33,12 @@
             MenuStrip = new MenuStrip();
             herramientasToolStripMenuItem = new ToolStripMenuItem();
             ClientesToolStripMenuItem = new ToolStripMenuItem();
+            empleadosToolStripMenuItem = new ToolStripMenuItem();
             Timer = new System.Windows.Forms.Timer(components);
             StatusStrip = new StatusStrip();
             lblEquipo = new ToolStripStatusLabel();
             lblRed = new ToolStripStatusLabel();
             lblTiempo = new ToolStripStatusLabel();
-            empleadosToolStripMenuItem = new ToolStripMenuItem();
             MenuStrip.SuspendLayout();
             StatusStrip.SuspendLayout();
             SuspendLayout();
@@ -73,6 +73,14 @@
             ClientesToolStripMenuItem.Size = new Size(180, 22);
             ClientesToolStripMenuItem.Text = "Clientes";
             ClientesToolStripMenuItem.Click += ClientesToolStripMenuItem_Click;
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            empleadosToolStripMenuItem.Image = (Image)resources.GetObject("empleadosToolStripMenuItem.Image");
+            empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            empleadosToolStripMenuItem.Size = new Size(180, 22);
+            empleadosToolStripMenuItem.Text = "Empleados";
+            empleadosToolStripMenuItem.Click += empleadosToolStripMenuItem_Click;
             // 
             // Timer
             // 
@@ -112,13 +120,6 @@
             lblTiempo.Name = "lblTiempo";
             lblTiempo.Size = new Size(50, 17);
             lblTiempo.Text = "Tiempo:";
-            // 
-            // empleadosToolStripMenuItem
-            // 
-            empleadosToolStripMenuItem.Image = (Image)resources.GetObject("empleadosToolStripMenuItem.Image");
-            empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            empleadosToolStripMenuItem.Size = new Size(180, 22);
-            empleadosToolStripMenuItem.Text = "Empleados";
             // 
             // MDIPrincipal
             // 
