@@ -69,7 +69,7 @@ namespace ProyBanco_ADO
                     objEmpleadoBE.Cor_Emp = dtr["Correo"].ToString();
                     objEmpleadoBE.Img_Emp = null; // Pendiente
                     objEmpleadoBE.Id_Ubigeo = dtr["Id_Ubigeo"].ToString();
-                    objEmpleadoBE.Est_Emp = Convert.ToInt16(dtr["Estado"].ToString());
+                    objEmpleadoBE.Est_Emp = Convert.ToInt16(dtr["Est_Emp"]);
                 }
                 dtr.Close();
                 return objEmpleadoBE;
