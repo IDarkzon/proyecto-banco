@@ -69,6 +69,7 @@
             // txtContrasena
             // 
             txtContrasena.BackColor = SystemColors.Window;
+            txtContrasena.CharacterCasing = CharacterCasing.Lower;
             txtContrasena.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtContrasena.Location = new Point(55, 234);
             txtContrasena.Name = "txtContrasena";

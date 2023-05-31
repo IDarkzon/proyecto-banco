@@ -56,7 +56,6 @@
             // 
             // herramientasToolStripMenuItem
             // 
-            herramientasToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
             herramientasToolStripMenuItem.BackColor = Color.Transparent;
             herramientasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ClientesToolStripMenuItem, empleadosToolStripMenuItem });
             herramientasToolStripMenuItem.ForeColor = Color.Black;
