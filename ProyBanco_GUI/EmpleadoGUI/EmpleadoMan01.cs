@@ -62,14 +62,32 @@ namespace ProyBanco_GUI.EmpleadoGUI
             }
         }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EmpleadoMan03 frmEmpleadoMan = new EmpleadoMan03();
+                frmEmpleadoMan.Codigo = dtgDatos.CurrentRow.Cells[0].Value.ToString();
+                frmEmpleadoMan.ShowDialog();
+
+                CargarDatos(txtFiltro.Text.Trim());
+            } 
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
         private void dtgDatos_DoubleClick(object sender, EventArgs e)
         {
-
+            btnEditar.PerformClick();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }
