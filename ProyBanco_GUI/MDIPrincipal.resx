@@ -1,64 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!--
-    Microsoft ResX Schema 
-
-    Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
-    associated with the data types.
-
-    Example:
-
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-
-    There are any number of "resheader" rows that contain simple
-    name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
-    mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
-    extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
-    read any of the formats listed below.
-
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
+﻿<root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -120,13 +60,41 @@
   <metadata name="MenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="empleadosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
   <metadata name="Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
   <metadata name="StatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>219, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABx2AAAcdgAAAAAAAAAA

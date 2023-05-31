@@ -38,6 +38,7 @@
             lblEquipo = new ToolStripStatusLabel();
             lblRed = new ToolStripStatusLabel();
             lblTiempo = new ToolStripStatusLabel();
+            empleadosToolStripMenuItem = new ToolStripMenuItem();
             MenuStrip.SuspendLayout();
             StatusStrip.SuspendLayout();
             SuspendLayout();
@@ -57,7 +58,7 @@
             // 
             herramientasToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
             herramientasToolStripMenuItem.BackColor = Color.Transparent;
-            herramientasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ClientesToolStripMenuItem });
+            herramientasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ClientesToolStripMenuItem, empleadosToolStripMenuItem });
             herramientasToolStripMenuItem.ForeColor = Color.Black;
             herramientasToolStripMenuItem.Image = Properties.Resources.config;
             herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
@@ -112,6 +113,13 @@
             lblTiempo.Size = new Size(50, 17);
             lblTiempo.Text = "Tiempo:";
             // 
+            // empleadosToolStripMenuItem
+            // 
+            empleadosToolStripMenuItem.Image = (Image)resources.GetObject("empleadosToolStripMenuItem.Image");
+            empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            empleadosToolStripMenuItem.Size = new Size(180, 22);
+            empleadosToolStripMenuItem.Text = "Empleados";
+            // 
             // MDIPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -151,5 +159,6 @@
         private ToolStripStatusLabel lblTiempo;
         private ToolStripStatusLabel lblRed;
         private ToolStripMenuItem ClientesToolStripMenuItem;
+        private ToolStripMenuItem empleadosToolStripMenuItem;
     }
 }
