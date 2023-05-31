@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using ProyBanco_BE;
+using System.Drawing;
 
 namespace ProyBanco_ADO
 {
@@ -65,7 +66,7 @@ namespace ProyBanco_ADO
                     objEmpleadoBE.Tip_doc_Emp = Convert.ToInt16(dtr["Tip_doc_Emp"].ToString());
                     objEmpleadoBE.Tel_Emp = dtr["Telefono"].ToString();
                     objEmpleadoBE.Cor_Emp = dtr["Correo"].ToString();
-                    objEmpleadoBE.Img_Emp = Byte.Parse(dtr["Imagen"].ToString());
+                    objEmpleadoBE.Img_Emp = 1; // Pendiente
                     objEmpleadoBE.Id_Ubigeo = dtr["Id_Ubigeo"].ToString();
                     objEmpleadoBE.Est_Emp = Convert.ToInt16(dtr["Estado"].ToString());
                 }
