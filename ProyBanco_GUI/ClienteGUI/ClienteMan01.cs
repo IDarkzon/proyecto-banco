@@ -24,13 +24,14 @@ namespace ProyBanco_GUI.ClienteGUI
 
         private void ClienteMan01_Load(object sender, EventArgs e)
         {
-            CargarDatos("");
-
             if (clsCredenciales.Nivel == 2)
             {
                 btnNuevo.Visible = false;
                 btnEditar.Visible = false;
             }
+
+            dtgDatos.AutoGenerateColumns = false;
+            CargarDatos("");
         }
 
         private void CargarDatos(String strFiltro)

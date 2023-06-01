@@ -80,7 +80,7 @@ namespace ProyBanco_GUI
         private void MDIPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult vrpta;
-            vrpta = MessageBox.Show("¿Estás seguro que quieres salir del aplicativo?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            vrpta = MessageBox.Show("¿Estás seguro de que quieres salir del Programa?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (vrpta == DialogResult.No)
             {
                 e.Cancel = true;
