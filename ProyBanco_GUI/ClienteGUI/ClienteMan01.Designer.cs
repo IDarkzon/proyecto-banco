@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             btnCerrar = new Button();
             btnNuevo = new Button();
             btnEditar = new Button();
@@ -36,6 +39,21 @@
             txtFiltro = new TextBox();
             lblRegistros = new Label();
             lblDatos = new Label();
+            Codigo = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            Apellido_Paterno = new DataGridViewTextBoxColumn();
+            Apellido_Materno = new DataGridViewTextBoxColumn();
+            Numero_Documento = new DataGridViewTextBoxColumn();
+            Tipo_Documento = new DataGridViewTextBoxColumn();
+            Edad = new DataGridViewTextBoxColumn();
+            Telefono = new DataGridViewTextBoxColumn();
+            Correo = new DataGridViewTextBoxColumn();
+            Direccion = new DataGridViewTextBoxColumn();
+            Departamento = new DataGridViewTextBoxColumn();
+            Provincia = new DataGridViewTextBoxColumn();
+            Distrito = new DataGridViewTextBoxColumn();
+            Estado = new DataGridViewTextBoxColumn();
+            Fec_Registro = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtgDatos).BeginInit();
             SuspendLayout();
             // 
@@ -78,7 +96,16 @@
             dtgDatos.AllowUserToDeleteRows = false;
             dtgDatos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dtgDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgDatos.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nombre, Apellido_Paterno, Apellido_Materno, Numero_Documento, Tipo_Documento, Edad, Telefono, Correo, Direccion, Departamento, Provincia, Distrito, Estado, Fec_Registro });
             dtgDatos.Location = new Point(36, 93);
             dtgDatos.MultiSelect = false;
             dtgDatos.Name = "dtgDatos";
@@ -135,6 +162,116 @@
             lblDatos.TabIndex = 7;
             lblDatos.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // Codigo
+            // 
+            Codigo.DataPropertyName = "Codigo";
+            Codigo.HeaderText = "Código";
+            Codigo.Name = "Codigo";
+            Codigo.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            Nombre.DataPropertyName = "Nombre";
+            Nombre.HeaderText = "Nombre";
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            // 
+            // Apellido_Paterno
+            // 
+            Apellido_Paterno.DataPropertyName = "Apellido_Paterno";
+            Apellido_Paterno.HeaderText = "Apellido Paterno";
+            Apellido_Paterno.Name = "Apellido_Paterno";
+            Apellido_Paterno.ReadOnly = true;
+            // 
+            // Apellido_Materno
+            // 
+            Apellido_Materno.DataPropertyName = "Apellido_Materno";
+            Apellido_Materno.HeaderText = "Apellido Materno";
+            Apellido_Materno.Name = "Apellido_Materno";
+            Apellido_Materno.ReadOnly = true;
+            // 
+            // Numero_Documento
+            // 
+            Numero_Documento.DataPropertyName = "Numero_Documento";
+            Numero_Documento.HeaderText = "Documento";
+            Numero_Documento.Name = "Numero_Documento";
+            Numero_Documento.ReadOnly = true;
+            // 
+            // Tipo_Documento
+            // 
+            Tipo_Documento.DataPropertyName = "Tipo_Documento";
+            Tipo_Documento.HeaderText = "Tipo Documento";
+            Tipo_Documento.Name = "Tipo_Documento";
+            Tipo_Documento.ReadOnly = true;
+            // 
+            // Edad
+            // 
+            Edad.DataPropertyName = "Edad";
+            Edad.HeaderText = "Edad";
+            Edad.Name = "Edad";
+            Edad.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            Telefono.DataPropertyName = "Telefono";
+            dataGridViewCellStyle2.NullValue = null;
+            Telefono.DefaultCellStyle = dataGridViewCellStyle2;
+            Telefono.HeaderText = "Teléfono";
+            Telefono.Name = "Telefono";
+            Telefono.ReadOnly = true;
+            // 
+            // Correo
+            // 
+            Correo.DataPropertyName = "Correo";
+            Correo.HeaderText = "Correo";
+            Correo.Name = "Correo";
+            Correo.ReadOnly = true;
+            // 
+            // Direccion
+            // 
+            Direccion.DataPropertyName = "Direccion";
+            Direccion.HeaderText = "Dirección";
+            Direccion.Name = "Direccion";
+            Direccion.ReadOnly = true;
+            // 
+            // Departamento
+            // 
+            Departamento.DataPropertyName = "Departamento";
+            Departamento.HeaderText = "Departamento";
+            Departamento.Name = "Departamento";
+            Departamento.ReadOnly = true;
+            // 
+            // Provincia
+            // 
+            Provincia.DataPropertyName = "Provincia";
+            Provincia.HeaderText = "Provincia";
+            Provincia.Name = "Provincia";
+            Provincia.ReadOnly = true;
+            // 
+            // Distrito
+            // 
+            Distrito.DataPropertyName = "Distrito";
+            Distrito.HeaderText = "Distrito";
+            Distrito.Name = "Distrito";
+            Distrito.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            Estado.DataPropertyName = "Estado";
+            Estado.HeaderText = "Estado";
+            Estado.Name = "Estado";
+            Estado.ReadOnly = true;
+            // 
+            // Fec_Registro
+            // 
+            Fec_Registro.DataPropertyName = "Fec_Registro";
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            Fec_Registro.DefaultCellStyle = dataGridViewCellStyle3;
+            Fec_Registro.HeaderText = "F. Registro";
+            Fec_Registro.Name = "Fec_Registro";
+            Fec_Registro.ReadOnly = true;
+            // 
             // ClienteMan01
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -172,5 +309,20 @@
         private TextBox txtFiltro;
         private Label lblRegistros;
         private Label lblDatos;
+        private DataGridViewTextBoxColumn Codigo;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Apellido_Paterno;
+        private DataGridViewTextBoxColumn Apellido_Materno;
+        private DataGridViewTextBoxColumn Numero_Documento;
+        private DataGridViewTextBoxColumn Tipo_Documento;
+        private DataGridViewTextBoxColumn Edad;
+        private DataGridViewTextBoxColumn Telefono;
+        private DataGridViewTextBoxColumn Correo;
+        private DataGridViewTextBoxColumn Direccion;
+        private DataGridViewTextBoxColumn Departamento;
+        private DataGridViewTextBoxColumn Provincia;
+        private DataGridViewTextBoxColumn Distrito;
+        private DataGridViewTextBoxColumn Estado;
+        private DataGridViewTextBoxColumn Fec_Registro;
     }
 }

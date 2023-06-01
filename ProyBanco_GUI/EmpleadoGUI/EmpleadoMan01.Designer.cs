@@ -154,7 +154,7 @@
             MinimizeBox = false;
             Name = "EmpleadoMan01";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Información de Clientes";
+            Text = "Información de Empleados";
             WindowState = FormWindowState.Maximized;
             Load += EmpleadoMan01_Load;
             ((System.ComponentModel.ISupportInitialize)dtgDatos).EndInit();
