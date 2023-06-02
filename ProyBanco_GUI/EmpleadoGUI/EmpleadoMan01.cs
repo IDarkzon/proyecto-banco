@@ -16,6 +16,7 @@ namespace ProyBanco_GUI.EmpleadoGUI
     {
         EmpleadoBL objEmpleadoBL = new EmpleadoBL();
         DataView dtv;
+
         public EmpleadoMan01()
         {
             InitializeComponent();
@@ -23,6 +24,13 @@ namespace ProyBanco_GUI.EmpleadoGUI
 
         private void EmpleadoMan01_Load(object sender, EventArgs e)
         {
+            if (clsCredenciales.Nivel == 2)
+            {
+                btnNuevo.Visible = false;
+                btnEditar.Visible = false;
+            }
+
+            dtgDatos.AutoGenerateColumns = false;
             CargarDatos("");
         }
 

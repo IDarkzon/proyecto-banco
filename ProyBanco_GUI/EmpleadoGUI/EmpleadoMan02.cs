@@ -177,7 +177,7 @@ namespace ProyBanco_GUI.EmpleadoGUI
                 objEmpleadoBE.Cor_Emp = txtCorreo.Text.Trim();
                 objEmpleadoBE.Tip_doc_Emp = tipoDocumento;
                 objEmpleadoBE.Num_doc_Emp = txtDocumento.Text.Trim();
-                // objEmpleadoBE.Img_Emp = null; // todo: Por resolver
+                objEmpleadoBE.Img_Emp = null; // todo: Por resolver
                 objEmpleadoBE.Id_Ubigeo = cboDepartamento.SelectedValue.ToString() + cboProvincia.SelectedValue.ToString() + cboDistrito.SelectedValue.ToString();
                 objEmpleadoBE.Est_Emp = Convert.ToInt16(chkActivo.Checked);
 
