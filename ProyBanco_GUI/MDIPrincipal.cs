@@ -108,5 +108,20 @@ namespace ProyBanco_GUI
             frmClienteMan.MdiParent = this;
             frmClienteMan.Show();
         }
+
+        private void visorFotosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = this.MdiChildren.FirstOrDefault(x => x is ProyBanco_GUI.frmVisorImagenes);
+
+            if (frm != null)
+            {
+                frm.BringToFront();
+                return;
+            }
+
+            ProyBanco_GUI.frmVisorImagenes frmVisorImagenes = new ProyBanco_GUI.frmVisorImagenes();
+            frmVisorImagenes.MdiParent = this;
+            frmVisorImagenes.Show();
+        }
     }
 }

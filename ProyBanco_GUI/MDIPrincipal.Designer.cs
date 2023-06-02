@@ -34,6 +34,7 @@
             herramientasToolStripMenuItem = new ToolStripMenuItem();
             ClientesToolStripMenuItem = new ToolStripMenuItem();
             empleadosToolStripMenuItem = new ToolStripMenuItem();
+            visorFotosToolStripMenuItem = new ToolStripMenuItem();
             Timer = new System.Windows.Forms.Timer(components);
             StatusStrip = new StatusStrip();
             lblEquipo = new ToolStripStatusLabel();
@@ -47,7 +48,7 @@
             // 
             MenuStrip.BackColor = SystemColors.Control;
             MenuStrip.BackgroundImageLayout = ImageLayout.None;
-            MenuStrip.Items.AddRange(new ToolStripItem[] { herramientasToolStripMenuItem });
+            MenuStrip.Items.AddRange(new ToolStripItem[] { herramientasToolStripMenuItem, visorFotosToolStripMenuItem });
             MenuStrip.Location = new Point(0, 0);
             MenuStrip.Name = "MenuStrip";
             MenuStrip.Size = new Size(800, 32);
@@ -69,7 +70,7 @@
             // 
             ClientesToolStripMenuItem.Image = Properties.Resources.cliente;
             ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem";
-            ClientesToolStripMenuItem.Size = new Size(132, 22);
+            ClientesToolStripMenuItem.Size = new Size(180, 22);
             ClientesToolStripMenuItem.Text = "Clientes";
             ClientesToolStripMenuItem.Click += ClientesToolStripMenuItem_Click;
             // 
@@ -77,9 +78,17 @@
             // 
             empleadosToolStripMenuItem.Image = (Image)resources.GetObject("empleadosToolStripMenuItem.Image");
             empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            empleadosToolStripMenuItem.Size = new Size(132, 22);
+            empleadosToolStripMenuItem.Size = new Size(180, 22);
             empleadosToolStripMenuItem.Text = "Empleados";
             empleadosToolStripMenuItem.Click += empleadosToolStripMenuItem_Click;
+            // 
+            // visorFotosToolStripMenuItem
+            // 
+            visorFotosToolStripMenuItem.Image = (Image)resources.GetObject("visorFotosToolStripMenuItem.Image");
+            visorFotosToolStripMenuItem.Name = "visorFotosToolStripMenuItem";
+            visorFotosToolStripMenuItem.Size = new Size(115, 28);
+            visorFotosToolStripMenuItem.Text = "Visor Imagenes";
+            visorFotosToolStripMenuItem.Click += visorFotosToolStripMenuItem_Click;
             // 
             // Timer
             // 
@@ -160,5 +169,6 @@
         private ToolStripStatusLabel lblRed;
         private ToolStripMenuItem ClientesToolStripMenuItem;
         private ToolStripMenuItem empleadosToolStripMenuItem;
+        private ToolStripMenuItem visorFotosToolStripMenuItem;
     }
 }
