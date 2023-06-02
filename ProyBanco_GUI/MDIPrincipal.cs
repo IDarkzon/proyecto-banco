@@ -119,6 +119,15 @@ namespace ProyBanco_GUI
                 return;
             }
 
+            // Cerrar los otros formularios
+            foreach (Form frmHijo in this.MdiChildren)
+            {
+                if (frmHijo.Name != "frmVisorImagenes")
+                {
+                    frmHijo.Close();
+                }
+            }
+
             ProyBanco_GUI.frmVisorImagenes frmVisorImagenes = new ProyBanco_GUI.frmVisorImagenes();
             frmVisorImagenes.MdiParent = this;
             frmVisorImagenes.Show();
