@@ -59,5 +59,11 @@ namespace ProyBanco_GUI
         {
             btnSalir.ForeColor = Color.Black;
         }
+
+        private void frmVisorImagenes_Load(object sender, EventArgs e)
+        {
+            this.Height = 400;
+            this.Width = 700;
+        }
     }
 }

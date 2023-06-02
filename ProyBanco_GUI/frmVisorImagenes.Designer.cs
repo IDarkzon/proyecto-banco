@@ -121,6 +121,7 @@
             Name = "frmVisorImagenes";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Visor Imágenes";
+            Load += frmVisorImagenes_Load;
             ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
             ResumeLayout(false);
             PerformLayout();
