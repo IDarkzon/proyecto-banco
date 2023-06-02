@@ -138,7 +138,6 @@ namespace ProyBanco_GUI.EmpleadoGUI
                     tipoDocumento != objEmpleadoBE_Temp.Tip_doc_Emp ||
                     Id_Ubigeo != objEmpleadoBE_Temp.Id_Ubigeo ||
                     Convert.ToInt16(chkActivo.Checked) != objEmpleadoBE_Temp.Est_Emp) 
-             
             {
                 // Hay cambios
                 return false;
