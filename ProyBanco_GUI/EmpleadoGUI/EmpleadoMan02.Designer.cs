@@ -350,6 +350,7 @@
             btnFoto.TabIndex = 58;
             btnFoto.Text = "Cargar Foto";
             btnFoto.UseVisualStyleBackColor = true;
+            btnFoto.Click += btnFoto_Click;
             // 
             // EmpleadoMan02
             // 

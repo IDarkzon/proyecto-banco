@@ -137,7 +137,8 @@ namespace ProyBanco_GUI.EmpleadoGUI
                     txtDocumento.Text.Trim() != objEmpleadoBE_Temp.Num_doc_Emp ||
                     tipoDocumento != objEmpleadoBE_Temp.Tip_doc_Emp ||
                     Id_Ubigeo != objEmpleadoBE_Temp.Id_Ubigeo ||
-                    Convert.ToInt16(chkActivo.Checked) != objEmpleadoBE_Temp.Est_Emp)
+                    Convert.ToInt16(chkActivo.Checked) != objEmpleadoBE_Temp.Est_Emp) 
+             
             {
                 // Hay cambios
                 return false;
@@ -208,6 +209,11 @@ namespace ProyBanco_GUI.EmpleadoGUI
                     throw new Exception("El Carnet de Extranjería o Pasaporte debe tener 12 dígitos.");
                 }
 
+                if (pbFoto.Image == null)
+                {
+                    throw new Exception("La foto es obligatoria.");
+                }
+
                 // Definición
                 Int16 tipoDocumento;
                 if (optDNI.Checked)
@@ -236,14 +242,20 @@ namespace ProyBanco_GUI.EmpleadoGUI
                 objEmpleadoBE.Cor_Emp = txtCorreo.Text.Trim();
                 objEmpleadoBE.Tip_doc_Emp = tipoDocumento;
                 objEmpleadoBE.Num_doc_Emp = txtDocumento.Text.Trim();
-                objEmpleadoBE.Img_Emp = null; // todo: Por resolver
                 objEmpleadoBE.Id_Ubigeo = cboDepartamento.SelectedValue.ToString() + cboProvincia.SelectedValue.ToString() + cboDistrito.SelectedValue.ToString();
                 objEmpleadoBE.Est_Emp = Convert.ToInt16(chkActivo.Checked);
 
-                objEmpleadoBE.Usu_Registro = clsCredenciales.Usuario;
+                // Imagen
+                System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                pbFoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                objEmpleadoBE.Img_Emp = ms.GetBuffer();
+
+
+                // Auditoría
+                objEmpleadoBE.Usu_Ult_Mod = clsCredenciales.Usuario;
 
                 // Enviamos los datos
-                if (objEmpleadoBL.InsertarEmpleado(objEmpleadoBE))
+                if (objEmpleadoBL.ActualizarEmpleado(objEmpleadoBE))
                 {
                     this.Close();
                 }
@@ -286,5 +298,22 @@ namespace ProyBanco_GUI.EmpleadoGUI
         }
 
         #endregion
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog objOpenFileDialog = new OpenFileDialog();
+                objOpenFileDialog.Filter = "Archivos de imagen (*.jpg, *.png) | *.jpg; *.png";
+                if (objOpenFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pbFoto.Image = Image.FromFile(objOpenFileDialog.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }

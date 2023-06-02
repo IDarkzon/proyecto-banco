@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblDatos = new Label();
             lblRegistros = new Label();
             txtFiltro = new TextBox();
@@ -36,6 +38,26 @@
             btnEditar = new Button();
             btnNuevo = new Button();
             btnCerrar = new Button();
+            Codigo = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            Apellido_Paterno = new DataGridViewTextBoxColumn();
+            Apellido_Materno = new DataGridViewTextBoxColumn();
+            Numero_Documento = new DataGridViewTextBoxColumn();
+            Tipo_Documento = new DataGridViewTextBoxColumn();
+            Telefono = new DataGridViewTextBoxColumn();
+            Correo = new DataGridViewTextBoxColumn();
+            Departamento = new DataGridViewTextBoxColumn();
+            Provincia = new DataGridViewTextBoxColumn();
+            Distrito = new DataGridViewTextBoxColumn();
+            Estado = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtgDatos).BeginInit();
             SuspendLayout();
             // 
@@ -135,6 +157,129 @@
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click;
             // 
+            // Codigo
+            // 
+            Codigo.DataPropertyName = "Codigo";
+            Codigo.HeaderText = "Código";
+            Codigo.Name = "Codigo";
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.Name = "Nombre";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "Código";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.DataPropertyName = "Codigo";
+            dataGridViewTextBoxColumn3.HeaderText = "Código";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.DataPropertyName = "Nombre";
+            dataGridViewTextBoxColumn4.HeaderText = "Nombre";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // Apellido_Paterno
+            // 
+            Apellido_Paterno.DataPropertyName = "Apellido Paterno";
+            Apellido_Paterno.HeaderText = "Apellido Paterno";
+            Apellido_Paterno.Name = "Apellido_Paterno";
+            Apellido_Paterno.Width = 362;
+            // 
+            // Apellido_Materno
+            // 
+            Apellido_Materno.DataPropertyName = "Apellido Materno";
+            Apellido_Materno.HeaderText = "Apellido Materno";
+            Apellido_Materno.Name = "Apellido_Materno";
+            // 
+            // Numero_Documento
+            // 
+            Numero_Documento.DataPropertyName = "Numero Documento";
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
+            Numero_Documento.DefaultCellStyle = dataGridViewCellStyle1;
+            Numero_Documento.HeaderText = "Documento";
+            Numero_Documento.Name = "Numero_Documento";
+            // 
+            // Tipo_Documento
+            // 
+            Tipo_Documento.DataPropertyName = "Tipo Documento";
+            Tipo_Documento.HeaderText = "Tipo Documento";
+            Tipo_Documento.Name = "Tipo_Documento";
+            // 
+            // Telefono
+            // 
+            Telefono.DataPropertyName = "Telefono";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
+            Telefono.DefaultCellStyle = dataGridViewCellStyle2;
+            Telefono.HeaderText = "Teléfono";
+            Telefono.Name = "Telefono";
+            // 
+            // Correo
+            // 
+            Correo.DataPropertyName = "Correo";
+            Correo.HeaderText = "Correo";
+            Correo.Name = "Correo";
+            // 
+            // Departamento
+            // 
+            Departamento.DataPropertyName = "Departamento";
+            Departamento.HeaderText = "Departamento";
+            Departamento.Name = "Departamento";
+            // 
+            // Provincia
+            // 
+            Provincia.DataPropertyName = "Provincia";
+            Provincia.HeaderText = "Provincia";
+            Provincia.Name = "Provincia";
+            // 
+            // Distrito
+            // 
+            Distrito.DataPropertyName = "Distrito";
+            Distrito.HeaderText = "Distrito";
+            Distrito.Name = "Distrito";
+            // 
+            // Estado
+            // 
+            Estado.DataPropertyName = "Estado";
+            Estado.HeaderText = "Estado";
+            Estado.Name = "Estado";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.DataPropertyName = "Codigo";
+            dataGridViewTextBoxColumn5.HeaderText = "Código";
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.DataPropertyName = "Nombre";
+            dataGridViewTextBoxColumn6.HeaderText = "Nombre";
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            dataGridViewTextBoxColumn7.DataPropertyName = "Codigo";
+            dataGridViewTextBoxColumn7.HeaderText = "Codigo";
+            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            dataGridViewTextBoxColumn7.Width = 725;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewTextBoxColumn8.DataPropertyName = "Nombre";
+            dataGridViewTextBoxColumn8.HeaderText = "Nombre";
+            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
             // EmpleadoMan01
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -172,5 +317,25 @@
         private Button btnEditar;
         private Button btnNuevo;
         private Button btnCerrar;
+        private DataGridViewTextBoxColumn Codigo;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn Apellido_Paterno;
+        private DataGridViewTextBoxColumn Apellido_Materno;
+        private DataGridViewTextBoxColumn Numero_Documento;
+        private DataGridViewTextBoxColumn Tipo_Documento;
+        private DataGridViewTextBoxColumn Telefono;
+        private DataGridViewTextBoxColumn Correo;
+        private DataGridViewTextBoxColumn Departamento;
+        private DataGridViewTextBoxColumn Provincia;
+        private DataGridViewTextBoxColumn Distrito;
+        private DataGridViewTextBoxColumn Estado;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

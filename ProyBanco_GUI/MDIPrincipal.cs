@@ -51,7 +51,8 @@ namespace ProyBanco_GUI
                     lblRed.ForeColor = Color.Red;
                 }
 
-                lblEquipo.Text = "Equipo: " + miEquipo.Name + " | Estado:";
+                // Información del Usuario
+                lblEquipo.Text = "Usuario: " + clsCredenciales.Usuario + " | Estado:";
 
                 // Registramos la hora de ingreso
                 horaEntrada = DateTime.Now.TimeOfDay;

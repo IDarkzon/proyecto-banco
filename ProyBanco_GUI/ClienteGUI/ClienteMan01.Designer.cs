@@ -31,6 +31,8 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             btnCerrar = new Button();
             btnNuevo = new Button();
             btnEditar = new Button();
@@ -193,6 +195,8 @@
             // Numero_Documento
             // 
             Numero_Documento.DataPropertyName = "Numero_Documento";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
+            Numero_Documento.DefaultCellStyle = dataGridViewCellStyle2;
             Numero_Documento.HeaderText = "Documento";
             Numero_Documento.Name = "Numero_Documento";
             Numero_Documento.ReadOnly = true;
@@ -207,6 +211,8 @@
             // Edad
             // 
             Edad.DataPropertyName = "Edad";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
+            Edad.DefaultCellStyle = dataGridViewCellStyle3;
             Edad.HeaderText = "Edad";
             Edad.Name = "Edad";
             Edad.ReadOnly = true;
@@ -214,8 +220,9 @@
             // Telefono
             // 
             Telefono.DataPropertyName = "Telefono";
-            dataGridViewCellStyle2.NullValue = null;
-            Telefono.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.NullValue = null;
+            Telefono.DefaultCellStyle = dataGridViewCellStyle4;
             Telefono.HeaderText = "Teléfono";
             Telefono.Name = "Telefono";
             Telefono.ReadOnly = true;
@@ -265,9 +272,10 @@
             // Fec_Registro
             // 
             Fec_Registro.DataPropertyName = "Fec_Registro";
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            Fec_Registro.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "d";
+            dataGridViewCellStyle5.NullValue = null;
+            Fec_Registro.DefaultCellStyle = dataGridViewCellStyle5;
             Fec_Registro.HeaderText = "F. Registro";
             Fec_Registro.Name = "Fec_Registro";
             Fec_Registro.ReadOnly = true;

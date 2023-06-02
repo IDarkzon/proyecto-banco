@@ -69,7 +69,7 @@
             // 
             ClientesToolStripMenuItem.Image = Properties.Resources.cliente;
             ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem";
-            ClientesToolStripMenuItem.Size = new Size(180, 22);
+            ClientesToolStripMenuItem.Size = new Size(132, 22);
             ClientesToolStripMenuItem.Text = "Clientes";
             ClientesToolStripMenuItem.Click += ClientesToolStripMenuItem_Click;
             // 
@@ -77,7 +77,7 @@
             // 
             empleadosToolStripMenuItem.Image = (Image)resources.GetObject("empleadosToolStripMenuItem.Image");
             empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            empleadosToolStripMenuItem.Size = new Size(180, 22);
+            empleadosToolStripMenuItem.Size = new Size(132, 22);
             empleadosToolStripMenuItem.Text = "Empleados";
             empleadosToolStripMenuItem.Click += empleadosToolStripMenuItem_Click;
             // 
@@ -102,8 +102,8 @@
             lblEquipo.BackColor = Color.Black;
             lblEquipo.ForeColor = Color.White;
             lblEquipo.Name = "lblEquipo";
-            lblEquipo.Size = new Size(47, 17);
-            lblEquipo.Text = "Equipo:";
+            lblEquipo.Size = new Size(50, 17);
+            lblEquipo.Text = "Usuario:";
             // 
             // lblRed
             // 

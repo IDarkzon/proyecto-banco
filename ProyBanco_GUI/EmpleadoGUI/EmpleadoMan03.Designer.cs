@@ -362,6 +362,7 @@
             btnFoto.TabIndex = 68;
             btnFoto.Text = "Cargar Foto";
             btnFoto.UseVisualStyleBackColor = true;
+            btnFoto.Click += btnFoto_Click;
             // 
             // pbFoto
             // 

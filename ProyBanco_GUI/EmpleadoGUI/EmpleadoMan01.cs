@@ -24,20 +24,13 @@ namespace ProyBanco_GUI.EmpleadoGUI
 
         private void EmpleadoMan01_Load(object sender, EventArgs e)
         {
-            if (clsCredenciales.Nivel == 2)
-            {
-                btnNuevo.Visible = false;
-                btnEditar.Visible = false;
-            }
-
-            dtgDatos.AutoGenerateColumns = false;
             CargarDatos("");
         }
 
         private void CargarDatos(string strFiltro)
         {
             dtv = new DataView(objEmpleadoBL.ListarEmpleado());
-            dtv.RowFilter = "Nombre LIKE '%" + strFiltro + "%'";
+            dtv.RowFilter = "Nombre like '%" + strFiltro + "%'";
             dtgDatos.DataSource = dtv;
             lblDatos.Text = dtgDatos.Rows.Count.ToString();
         }
