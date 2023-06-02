@@ -74,7 +74,7 @@
             btnSalir.Margin = new Padding(0);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(42, 39);
-            btnSalir.TabIndex = 56;
+            btnSalir.TabIndex = 24;
             btnSalir.Text = "X";
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnCerrar_Click;
@@ -88,7 +88,7 @@
             lblTitulo.Location = new Point(34, 33);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(181, 30);
-            lblTitulo.TabIndex = 29;
+            lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Nuevo Empleado";
             // 
             // chkActivo
@@ -97,7 +97,7 @@
             chkActivo.Location = new Point(36, 350);
             chkActivo.Name = "chkActivo";
             chkActivo.Size = new Size(60, 19);
-            chkActivo.TabIndex = 53;
+            chkActivo.TabIndex = 21;
             chkActivo.Text = "Activo";
             chkActivo.UseVisualStyleBackColor = true;
             // 
@@ -108,7 +108,7 @@
             cboDepartamento.Location = new Point(37, 307);
             cboDepartamento.Name = "cboDepartamento";
             cboDepartamento.Size = new Size(225, 23);
-            cboDepartamento.TabIndex = 52;
+            cboDepartamento.TabIndex = 16;
             cboDepartamento.SelectionChangeCommitted += cboDepartamento_SelectionChangeCommitted;
             // 
             // cboProvincia
@@ -118,7 +118,7 @@
             cboProvincia.Location = new Point(281, 307);
             cboProvincia.Name = "cboProvincia";
             cboProvincia.Size = new Size(225, 23);
-            cboProvincia.TabIndex = 51;
+            cboProvincia.TabIndex = 18;
             cboProvincia.SelectionChangeCommitted += cboProvincia_SelectionChangeCommitted;
             // 
             // cboDistrito
@@ -128,7 +128,7 @@
             cboDistrito.Location = new Point(527, 307);
             cboDistrito.Name = "cboDistrito";
             cboDistrito.Size = new Size(225, 23);
-            cboDistrito.TabIndex = 50;
+            cboDistrito.TabIndex = 20;
             // 
             // lblDistrito
             // 
@@ -136,7 +136,7 @@
             lblDistrito.Location = new Point(527, 289);
             lblDistrito.Name = "lblDistrito";
             lblDistrito.Size = new Size(48, 15);
-            lblDistrito.TabIndex = 49;
+            lblDistrito.TabIndex = 19;
             lblDistrito.Text = "Distrito:";
             // 
             // lblDepartamento
@@ -146,7 +146,7 @@
             lblDepartamento.Margin = new Padding(3, 0, 3, 3);
             lblDepartamento.Name = "lblDepartamento";
             lblDepartamento.Size = new Size(86, 15);
-            lblDepartamento.TabIndex = 47;
+            lblDepartamento.TabIndex = 15;
             lblDepartamento.Text = "Departamento:";
             // 
             // lblProvincia
@@ -155,7 +155,7 @@
             lblProvincia.Location = new Point(281, 289);
             lblProvincia.Name = "lblProvincia";
             lblProvincia.Size = new Size(59, 15);
-            lblProvincia.TabIndex = 48;
+            lblProvincia.TabIndex = 17;
             lblProvincia.Text = "Provincia:";
             // 
             // txtDocumento
@@ -165,7 +165,7 @@
             txtDocumento.Name = "txtDocumento";
             txtDocumento.PlaceholderText = "Ingrese el Documento";
             txtDocumento.Size = new Size(150, 23);
-            txtDocumento.TabIndex = 46;
+            txtDocumento.TabIndex = 12;
             // 
             // groupBox1
             // 
@@ -175,7 +175,7 @@
             groupBox1.Location = new Point(281, 151);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(226, 117);
-            groupBox1.TabIndex = 42;
+            groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Tipo de Documento";
             // 
@@ -219,7 +219,7 @@
             btnGuardar.Location = new Point(573, 397);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(75, 23);
-            btnGuardar.TabIndex = 54;
+            btnGuardar.TabIndex = 22;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
@@ -229,7 +229,7 @@
             btnCerrar.Location = new Point(677, 397);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(75, 23);
-            btnCerrar.TabIndex = 55;
+            btnCerrar.TabIndex = 23;
             btnCerrar.Text = "Cerrar";
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click;
@@ -241,7 +241,7 @@
             txtCorreo.Name = "txtCorreo";
             txtCorreo.PlaceholderText = "Ingrese el Correo";
             txtCorreo.Size = new Size(150, 23);
-            txtCorreo.TabIndex = 39;
+            txtCorreo.TabIndex = 10;
             // 
             // txtTelefono
             // 
@@ -250,7 +250,7 @@
             txtTelefono.Name = "txtTelefono";
             txtTelefono.PlaceholderText = "Ingrese el Teléfono";
             txtTelefono.Size = new Size(150, 23);
-            txtTelefono.TabIndex = 37;
+            txtTelefono.TabIndex = 8;
             // 
             // lblCorreo
             // 
@@ -258,7 +258,7 @@
             lblCorreo.Location = new Point(34, 198);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(46, 15);
-            lblCorreo.TabIndex = 38;
+            lblCorreo.TabIndex = 9;
             lblCorreo.Text = "Correo:";
             // 
             // lblTelefono
@@ -267,7 +267,7 @@
             lblTelefono.Location = new Point(34, 154);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(55, 15);
-            lblTelefono.TabIndex = 36;
+            lblTelefono.TabIndex = 7;
             lblTelefono.Text = "Teléfono:";
             // 
             // txtApellidoM
@@ -277,7 +277,7 @@
             txtApellidoM.Name = "txtApellidoM";
             txtApellidoM.PlaceholderText = "Ingrese el Apellido Materno";
             txtApellidoM.Size = new Size(226, 23);
-            txtApellidoM.TabIndex = 35;
+            txtApellidoM.TabIndex = 6;
             // 
             // lblApellidoM
             // 
@@ -285,7 +285,7 @@
             lblApellidoM.Location = new Point(525, 78);
             lblApellidoM.Name = "lblApellidoM";
             lblApellidoM.Size = new Size(102, 15);
-            lblApellidoM.TabIndex = 34;
+            lblApellidoM.TabIndex = 5;
             lblApellidoM.Text = "Apellido Materno:";
             // 
             // txtApellidoP
@@ -295,7 +295,7 @@
             txtApellidoP.Name = "txtApellidoP";
             txtApellidoP.PlaceholderText = "Ingrese el Apellido Paterno";
             txtApellidoP.Size = new Size(226, 23);
-            txtApellidoP.TabIndex = 33;
+            txtApellidoP.TabIndex = 4;
             // 
             // lblApellidoP
             // 
@@ -303,7 +303,7 @@
             lblApellidoP.Location = new Point(281, 78);
             lblApellidoP.Name = "lblApellidoP";
             lblApellidoP.Size = new Size(98, 15);
-            lblApellidoP.TabIndex = 32;
+            lblApellidoP.TabIndex = 3;
             lblApellidoP.Text = "Apellido Paterno:";
             // 
             // txtNombre
@@ -313,7 +313,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Ingrese el Nombre";
             txtNombre.Size = new Size(226, 23);
-            txtNombre.TabIndex = 31;
+            txtNombre.TabIndex = 2;
             // 
             // lblNombre
             // 
@@ -321,7 +321,7 @@
             lblNombre.Location = new Point(34, 78);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(54, 15);
-            lblNombre.TabIndex = 30;
+            lblNombre.TabIndex = 1;
             lblNombre.Text = "Nombre:";
             // 
             // lblDocumento
@@ -330,7 +330,7 @@
             lblDocumento.Location = new Point(34, 248);
             lblDocumento.Name = "lblDocumento";
             lblDocumento.Size = new Size(76, 15);
-            lblDocumento.TabIndex = 45;
+            lblDocumento.TabIndex = 11;
             lblDocumento.Text = "Documento: ";
             // 
             // pbFoto
@@ -347,7 +347,7 @@
             btnFoto.Location = new Point(527, 203);
             btnFoto.Name = "btnFoto";
             btnFoto.Size = new Size(79, 23);
-            btnFoto.TabIndex = 58;
+            btnFoto.TabIndex = 14;
             btnFoto.Text = "Cargar Foto";
             btnFoto.UseVisualStyleBackColor = true;
             btnFoto.Click += btnFoto_Click;

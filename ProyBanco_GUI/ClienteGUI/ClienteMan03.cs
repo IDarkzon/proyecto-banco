@@ -17,7 +17,7 @@ namespace ProyBanco_GUI.ClienteGUI
     public partial class ClienteMan03 : Form
     {
         ClienteBE objClienteBE = new ClienteBE();
-        ClienteBE objClienteBE_copia = new ClienteBE();
+        ClienteBE objClienteBE_Temp = new ClienteBE();
         ClienteBL objClienteBL = new ClienteBL();
 
         public ClienteMan03()
@@ -54,7 +54,7 @@ namespace ProyBanco_GUI.ClienteGUI
 
             // Mostrar Cliente a Actualizar
             objClienteBE = objClienteBL.ConsultarCliente(Codigo);
-            objClienteBE_copia = objClienteBL.ConsultarCliente(Codigo);
+            objClienteBE_Temp = objClienteBL.ConsultarCliente(Codigo);
 
             lblCodigoIng.Text = objClienteBE.Cod_Cli;
             txtNombre.Text = objClienteBE.Nom_Cli;
@@ -144,17 +144,17 @@ namespace ProyBanco_GUI.ClienteGUI
                     cboProvincia.SelectedValue.ToString() +
                     cboDistrito.SelectedValue.ToString();
 
-            if (txtNombre.Text.Trim() != objClienteBE_copia.Nom_Cli ||
-                txtApellidoP.Text.Trim() != objClienteBE_copia.Ape_pat_Cli ||
-                txtApellidoM.Text.Trim() != objClienteBE_copia.Ape_mat_Cli ||
-                txtTelefono.Text.Trim() != objClienteBE_copia.Tel_Cli ||
-                txtCorreo.Text.Trim() != objClienteBE_copia.Cor_Cli ||
-                txtDireccion.Text.Trim() != objClienteBE_copia.Dir_Cli ||
-                tipoDocumento != objClienteBE_copia.Tip_doc_Cli ||
-                dtpAnioNacimiento.Value != objClienteBE_copia.Fec_nac_Cli ||
-                txtDocumento.Text.Trim() != objClienteBE_copia.Num_doc_Cli ||
-                Id_Ubigeo != objClienteBE_copia.Id_Ubigeo ||
-                Convert.ToInt16(chkActivo.Checked) != objClienteBE_copia.Est_Cli)
+            if (txtNombre.Text.Trim() != objClienteBE_Temp.Nom_Cli ||
+                txtApellidoP.Text.Trim() != objClienteBE_Temp.Ape_pat_Cli ||
+                txtApellidoM.Text.Trim() != objClienteBE_Temp.Ape_mat_Cli ||
+                txtTelefono.Text.Trim() != objClienteBE_Temp.Tel_Cli ||
+                txtCorreo.Text.Trim() != objClienteBE_Temp.Cor_Cli ||
+                txtDireccion.Text.Trim() != objClienteBE_Temp.Dir_Cli ||
+                tipoDocumento != objClienteBE_Temp.Tip_doc_Cli ||
+                dtpAnioNacimiento.Value != objClienteBE_Temp.Fec_nac_Cli ||
+                txtDocumento.Text.Trim() != objClienteBE_Temp.Num_doc_Cli ||
+                Id_Ubigeo != objClienteBE_Temp.Id_Ubigeo ||
+                Convert.ToInt16(chkActivo.Checked) != objClienteBE_Temp.Est_Cli)
             {
                 // Hay cambios
                 return false;
