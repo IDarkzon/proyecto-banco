@@ -104,9 +104,24 @@ namespace ProyBanco_GUI
                 return;
             }
 
-            EmpleadoGUI.EmpleadoMan01 frmClienteMan = new EmpleadoGUI.EmpleadoMan01();
-            frmClienteMan.MdiParent = this;
-            frmClienteMan.Show();
+            EmpleadoGUI.EmpleadoMan01 frmEmpleadoMan = new EmpleadoGUI.EmpleadoMan01();
+            frmEmpleadoMan.MdiParent = this;
+            frmEmpleadoMan.Show();
+        }
+
+        private void cuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = this.MdiChildren.FirstOrDefault(x => x is CuentaGUI.CuentaMan01);
+
+            if (frm != null)
+            {
+                frm.BringToFront();
+                return;
+            }
+
+            CuentaGUI.CuentaMan01 frmCuentaMan = new CuentaGUI.CuentaMan01();
+            frmCuentaMan.MdiParent = this;
+            frmCuentaMan.Show();
         }
 
         private void visorFotosToolStripMenuItem_Click(object sender, EventArgs e)
