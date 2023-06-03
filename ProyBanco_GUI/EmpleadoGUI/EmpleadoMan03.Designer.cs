@@ -187,6 +187,7 @@
             txtDocumento.PlaceholderText = "Ingrese el Documento";
             txtDocumento.Size = new Size(150, 23);
             txtDocumento.TabIndex = 14;
+            txtDocumento.KeyPress += DetectarNumeros;
             // 
             // groupBox1
             // 
@@ -272,6 +273,7 @@
             txtTelefono.PlaceholderText = "Ingrese el Teléfono";
             txtTelefono.Size = new Size(150, 23);
             txtTelefono.TabIndex = 10;
+            txtTelefono.KeyPress += DetectarNumeros;
             // 
             // lblCorreo
             // 

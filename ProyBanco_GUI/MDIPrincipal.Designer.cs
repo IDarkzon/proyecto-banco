@@ -34,6 +34,7 @@
             herramientasToolStripMenuItem = new ToolStripMenuItem();
             ClientesToolStripMenuItem = new ToolStripMenuItem();
             empleadosToolStripMenuItem = new ToolStripMenuItem();
+            cuentasToolStripMenuItem = new ToolStripMenuItem();
             visorFotosToolStripMenuItem = new ToolStripMenuItem();
             Timer = new System.Windows.Forms.Timer(components);
             StatusStrip = new StatusStrip();
@@ -58,7 +59,7 @@
             // herramientasToolStripMenuItem
             // 
             herramientasToolStripMenuItem.BackColor = Color.Transparent;
-            herramientasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ClientesToolStripMenuItem, empleadosToolStripMenuItem });
+            herramientasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ClientesToolStripMenuItem, empleadosToolStripMenuItem, cuentasToolStripMenuItem });
             herramientasToolStripMenuItem.ForeColor = Color.Black;
             herramientasToolStripMenuItem.Image = Properties.Resources.config;
             herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
@@ -78,9 +79,17 @@
             // 
             empleadosToolStripMenuItem.Image = (Image)resources.GetObject("empleadosToolStripMenuItem.Image");
             empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            empleadosToolStripMenuItem.Size = new Size(180, 22);
+            empleadosToolStripMenuItem.Size = new Size(132, 22);
             empleadosToolStripMenuItem.Text = "Empleados";
             empleadosToolStripMenuItem.Click += empleadosToolStripMenuItem_Click;
+            // 
+            // cuentasToolStripMenuItem
+            // 
+            cuentasToolStripMenuItem.Image = Properties.Resources.Calc;
+            cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
+            cuentasToolStripMenuItem.Size = new Size(132, 22);
+            cuentasToolStripMenuItem.Text = "Cuentas";
+            cuentasToolStripMenuItem.Click += cuentasToolStripMenuItem_Click;
             // 
             // visorFotosToolStripMenuItem
             // 
@@ -170,5 +179,6 @@
         private ToolStripMenuItem ClientesToolStripMenuItem;
         private ToolStripMenuItem empleadosToolStripMenuItem;
         private ToolStripMenuItem visorFotosToolStripMenuItem;
+        private ToolStripMenuItem cuentasToolStripMenuItem;
     }
 }
