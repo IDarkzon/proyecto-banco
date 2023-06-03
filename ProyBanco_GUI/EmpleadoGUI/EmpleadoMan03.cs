@@ -137,7 +137,12 @@ namespace ProyBanco_GUI.EmpleadoGUI
                     txtDocumento.Text.Trim() != objEmpleadoBE_Temp.Num_doc_Emp ||
                     tipoDocumento != objEmpleadoBE_Temp.Tip_doc_Emp ||
                     Id_Ubigeo != objEmpleadoBE_Temp.Id_Ubigeo ||
+<<<<<<< HEAD
+                    Convert.ToInt16(chkActivo.Checked) != objEmpleadoBE_Temp.Est_Emp)
+
+=======
                     Convert.ToInt16(chkActivo.Checked) != objEmpleadoBE_Temp.Est_Emp) 
+>>>>>>> 2c399069c74ecc7e47e27dcd889aad863d398318
             {
                 // Hay cambios
                 return false;

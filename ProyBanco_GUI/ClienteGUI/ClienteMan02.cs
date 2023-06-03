@@ -175,7 +175,7 @@ namespace ProyBanco_GUI.ClienteGUI
                 if ((optCarnet.Checked || optPasaporte.Checked) && txtDocumento.Text.Length < 12)
                 {
                     throw new Exception("El Carnet de Extranjería o Pasaporte debe tener 12 dígitos.");
-                }      
+                }
 
                 // Definición
                 Int16 tipoDocumento;

@@ -206,7 +206,7 @@
             btnCerrar.Location = new Point(677, 397);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(75, 23);
-            btnCerrar.TabIndex = 27;
+            btnCerrar.TabIndex = 26;
             btnCerrar.Text = "Cerrar";
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click;
@@ -310,7 +310,7 @@
             btnGuardar.Location = new Point(573, 397);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(75, 23);
-            btnGuardar.TabIndex = 26;
+            btnGuardar.TabIndex = 25;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
@@ -348,7 +348,7 @@
             btnSalir.Margin = new Padding(0);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(42, 39);
-            btnSalir.TabIndex = 28;
+            btnSalir.TabIndex = 27;
             btnSalir.Text = "X";
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnCerrar_Click;
@@ -362,7 +362,7 @@
             cboProvincia.Location = new Point(281, 307);
             cboProvincia.Name = "cboProvincia";
             cboProvincia.Size = new Size(225, 23);
-            cboProvincia.TabIndex = 23;
+            cboProvincia.TabIndex = 21;
             cboProvincia.SelectionChangeCommitted += cboProvincia_SelectionChangeCommitted;
             // 
             // cboDepartamento
@@ -372,7 +372,7 @@
             cboDepartamento.Location = new Point(37, 307);
             cboDepartamento.Name = "cboDepartamento";
             cboDepartamento.Size = new Size(225, 23);
-            cboDepartamento.TabIndex = 23;
+            cboDepartamento.TabIndex = 19;
             cboDepartamento.SelectionChangeCommitted += cboDepartamento_SelectionChangeCommitted;
             // 
             // ClienteMan02

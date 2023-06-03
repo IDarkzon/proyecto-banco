@@ -136,7 +136,7 @@
             btnGuardar.Location = new Point(574, 407);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(75, 23);
-            btnGuardar.TabIndex = 28;
+            btnGuardar.TabIndex = 27;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
@@ -146,7 +146,7 @@
             btnCerrar.Location = new Point(678, 407);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(75, 23);
-            btnCerrar.TabIndex = 29;
+            btnCerrar.TabIndex = 28;
             btnCerrar.Text = "Cerrar";
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click;
@@ -332,7 +332,7 @@
             btnSalir.Margin = new Padding(0);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(42, 39);
-            btnSalir.TabIndex = 30;
+            btnSalir.TabIndex = 29;
             btnSalir.Text = "X";
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnCerrar_Click;
@@ -346,7 +346,7 @@
             cboDepartamento.Location = new Point(38, 333);
             cboDepartamento.Name = "cboDepartamento";
             cboDepartamento.Size = new Size(225, 23);
-            cboDepartamento.TabIndex = 34;
+            cboDepartamento.TabIndex = 21;
             cboDepartamento.SelectionChangeCommitted += cboDepartamento_SelectionChangeCommitted;
             // 
             // cboProvincia
@@ -356,7 +356,7 @@
             cboProvincia.Location = new Point(282, 333);
             cboProvincia.Name = "cboProvincia";
             cboProvincia.Size = new Size(225, 23);
-            cboProvincia.TabIndex = 35;
+            cboProvincia.TabIndex = 23;
             cboProvincia.SelectionChangeCommitted += cboProvincia_SelectionChangeCommitted;
             // 
             // cboDistrito
@@ -366,7 +366,7 @@
             cboDistrito.Location = new Point(528, 333);
             cboDistrito.Name = "cboDistrito";
             cboDistrito.Size = new Size(225, 23);
-            cboDistrito.TabIndex = 36;
+            cboDistrito.TabIndex = 25;
             // 
             // lblDistrito
             // 
@@ -374,7 +374,7 @@
             lblDistrito.Location = new Point(528, 315);
             lblDistrito.Name = "lblDistrito";
             lblDistrito.Size = new Size(48, 15);
-            lblDistrito.TabIndex = 33;
+            lblDistrito.TabIndex = 24;
             lblDistrito.Text = "Distrito:";
             // 
             // lblDepartamento
@@ -384,7 +384,7 @@
             lblDepartamento.Margin = new Padding(3, 0, 3, 3);
             lblDepartamento.Name = "lblDepartamento";
             lblDepartamento.Size = new Size(86, 15);
-            lblDepartamento.TabIndex = 31;
+            lblDepartamento.TabIndex = 20;
             lblDepartamento.Text = "Departamento:";
             // 
             // lblProvincia
@@ -393,7 +393,7 @@
             lblProvincia.Location = new Point(282, 315);
             lblProvincia.Name = "lblProvincia";
             lblProvincia.Size = new Size(59, 15);
-            lblProvincia.TabIndex = 32;
+            lblProvincia.TabIndex = 22;
             lblProvincia.Text = "Provincia:";
             // 
             // ClienteMan03
