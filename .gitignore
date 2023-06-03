@@ -364,5 +364,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+<<<<<<< HEAD
 /ProyectoTF-BancoNacion.sln
+=======
+>>>>>>> 2c399069c74ecc7e47e27dcd889aad863d398318
 /ProyBanco_GUI/App.config
