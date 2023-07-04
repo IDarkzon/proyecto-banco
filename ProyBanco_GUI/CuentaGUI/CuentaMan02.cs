@@ -39,10 +39,7 @@ namespace ProyBanco_GUI.CuentaGUI
         private void CuentaMan02_Load(object sender, EventArgs e)
         {
 
-            //dtpFechaApertura.MaxDate = DateTime.Now.AddDays(1);
         }
-
-
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {

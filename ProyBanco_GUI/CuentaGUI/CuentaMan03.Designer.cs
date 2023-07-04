@@ -152,7 +152,7 @@
             // chkActivo
             // 
             chkActivo.AutoSize = true;
-            chkActivo.Location = new Point(48, 275);
+            chkActivo.Location = new Point(49, 275);
             chkActivo.Name = "chkActivo";
             chkActivo.Size = new Size(60, 19);
             chkActivo.TabIndex = 9;

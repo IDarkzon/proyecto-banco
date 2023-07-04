@@ -60,7 +60,7 @@
             // 
             // txtCodCli
             // 
-            txtCodCli.Location = new Point(177, 97);
+            txtCodCli.Location = new Point(177, 102);
             txtCodCli.MaxLength = 4;
             txtCodCli.Name = "txtCodCli";
             txtCodCli.PlaceholderText = "C001";
@@ -78,7 +78,7 @@
             // 
             // txtCodAge
             // 
-            txtCodAge.Location = new Point(177, 151);
+            txtCodAge.Location = new Point(177, 153);
             txtCodAge.MaxLength = 4;
             txtCodAge.Name = "txtCodAge";
             txtCodAge.PlaceholderText = "A001";
