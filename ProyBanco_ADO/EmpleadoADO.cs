@@ -67,8 +67,7 @@ namespace ProyBanco_ADO
                     objEmpleadoBE.Tip_doc_Emp = Convert.ToInt16(dtr["Tip_doc_Emp"].ToString());
                     objEmpleadoBE.Tel_Emp = dtr["Telefono"].ToString();
                     objEmpleadoBE.Cor_Emp = dtr["Correo"].ToString();
-                    //objEmpleadoBE.Img_Emp = dtr[dtr.GetOrdinal("Imagen")] as byte[];
-                    objEmpleadoBE.Img_Emp = (byte[])dtr["Imagen"];
+                    objEmpleadoBE.Img_Emp = (Byte[])(dtr["Imagen"]);
                     objEmpleadoBE.Id_Ubigeo = dtr["Id_Ubigeo"].ToString();
                     objEmpleadoBE.Est_Emp = Convert.ToInt16(dtr["Est_Emp"]);
                 }

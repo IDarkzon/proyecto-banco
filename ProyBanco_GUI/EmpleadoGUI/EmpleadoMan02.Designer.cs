@@ -57,6 +57,7 @@
             lblDocumento = new Label();
             pbFoto = new PictureBox();
             btnFoto = new Button();
+            openFileDialog1 = new OpenFileDialog();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             SuspendLayout();
@@ -354,6 +355,10 @@
             btnFoto.UseVisualStyleBackColor = true;
             btnFoto.Click += btnFoto_Click;
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
             // EmpleadoMan02
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -429,5 +434,6 @@
         private Label lblDocumento;
         private PictureBox pbFoto;
         private Button btnFoto;
+        private OpenFileDialog openFileDialog1;
     }
 }
