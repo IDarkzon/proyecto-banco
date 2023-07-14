@@ -26,12 +26,28 @@ namespace ProyBanco_GUI.EmpleadoGUI
         }
 
         public String Codigo { get; set; }
+        public Byte[] fotoOriginal;
+        Boolean flag;
 
         private void EmpleadoMan03_Load(object sender, EventArgs e)
         {
             try
             {
                 CargarUbigeo("14", "01", "01");
+
+                // Cargar foto
+                objEmpleadoBE = objEmpleadoBL.ConsultarEmpleado(Codigo);
+
+                if (objEmpleadoBE.Img_Emp.Length == 0)
+                {
+                    pbFoto.Image = null;
+                }
+                else
+                {
+                    MemoryStream ms = new MemoryStream(objEmpleadoBE.Img_Emp);
+                    pbFoto.Image = Image.FromStream(ms);
+                    fotoOriginal = objEmpleadoBE.Img_Emp;
+                }
             }
             catch (Exception ex)
             {
@@ -245,10 +261,18 @@ namespace ProyBanco_GUI.EmpleadoGUI
                 objEmpleadoBE.Est_Emp = Convert.ToInt16(chkActivo.Checked);
 
                 // Imagen
-                System.IO.MemoryStream ms = new System.IO.MemoryStream();
-                pbFoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                objEmpleadoBE.Img_Emp = ms.GetBuffer();
+                //System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                //pbFoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                //objEmpleadoBE.Img_Emp = ms.GetBuffer();
 
+                if (flag)
+                {
+                    objEmpleadoBE.Img_Emp = File.ReadAllBytes(openFileDialog1.FileName);
+                }
+                else
+                {
+                    objEmpleadoBE.Img_Emp = fotoOriginal;
+                }
 
                 // Auditoría
                 objEmpleadoBE.Usu_Ult_Mod = clsCredenciales.Usuario;
@@ -302,11 +326,26 @@ namespace ProyBanco_GUI.EmpleadoGUI
         {
             try
             {
-                OpenFileDialog objOpenFileDialog = new OpenFileDialog();
-                objOpenFileDialog.Filter = "Archivos de imagen (*.jpg, *.png) | *.jpg; *.png";
-                if (objOpenFileDialog.ShowDialog() == DialogResult.OK)
+                //OpenFileDialog objOpenFileDialog = new OpenFileDialog();
+                //objOpenFileDialog.Filter = "Archivos de imagen (*.jpg, *.png) | *.jpg; *.png";
+                //if (objOpenFileDialog.ShowDialog() == DialogResult.OK)
+                //{
+                //    pbFoto.Image = Image.FromFile(objOpenFileDialog.FileName);
+                //}
+
+                openFileDialog1.FileName = String.Empty;
+                openFileDialog1.Multiselect = false;
+                openFileDialog1.Filter = "Archivos de imagen (*.jpg, *.png) | *.jpg; *.png";
+                openFileDialog1.ShowDialog();
+
+                if (openFileDialog1.FileName != String.Empty)
                 {
-                    pbFoto.Image = Image.FromFile(objOpenFileDialog.FileName);
+                    pbFoto.Image = Image.FromFile(openFileDialog1.FileName);
+                    flag = true;
+                }
+                else
+                {
+                    flag = false;
                 }
             }
             catch (Exception ex)
