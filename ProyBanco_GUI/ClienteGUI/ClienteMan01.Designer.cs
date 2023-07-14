@@ -37,10 +37,6 @@
             btnNuevo = new Button();
             btnEditar = new Button();
             dtgDatos = new DataGridView();
-            lblFiltro = new Label();
-            txtFiltro = new TextBox();
-            lblRegistros = new Label();
-            lblDatos = new Label();
             Codigo = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
             Apellido_Paterno = new DataGridViewTextBoxColumn();
@@ -56,6 +52,10 @@
             Distrito = new DataGridViewTextBoxColumn();
             Estado = new DataGridViewTextBoxColumn();
             Fec_Registro = new DataGridViewTextBoxColumn();
+            lblFiltro = new Label();
+            txtFiltro = new TextBox();
+            lblRegistros = new Label();
+            lblDatos = new Label();
             ((System.ComponentModel.ISupportInitialize)dtgDatos).BeginInit();
             SuspendLayout();
             // 
@@ -118,51 +118,6 @@
             dtgDatos.Size = new Size(728, 279);
             dtgDatos.TabIndex = 1;
             dtgDatos.DoubleClick += dtgDatos_DoubleClick;
-            // 
-            // lblFiltro
-            // 
-            lblFiltro.BackColor = Color.DimGray;
-            lblFiltro.BorderStyle = BorderStyle.FixedSingle;
-            lblFiltro.ForeColor = Color.White;
-            lblFiltro.Location = new Point(36, 50);
-            lblFiltro.Name = "lblFiltro";
-            lblFiltro.Size = new Size(163, 23);
-            lblFiltro.TabIndex = 5;
-            lblFiltro.Text = "Filtro de Datos por Nombre:";
-            lblFiltro.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // txtFiltro
-            // 
-            txtFiltro.Location = new Point(196, 50);
-            txtFiltro.Name = "txtFiltro";
-            txtFiltro.Size = new Size(200, 23);
-            txtFiltro.TabIndex = 0;
-            txtFiltro.TextChanged += txtFiltro_TextChanged;
-            // 
-            // lblRegistros
-            // 
-            lblRegistros.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblRegistros.BackColor = Color.DimGray;
-            lblRegistros.BorderStyle = BorderStyle.FixedSingle;
-            lblRegistros.ForeColor = Color.White;
-            lblRegistros.Location = new Point(656, 50);
-            lblRegistros.Margin = new Padding(3, 0, 0, 0);
-            lblRegistros.Name = "lblRegistros";
-            lblRegistros.Size = new Size(65, 23);
-            lblRegistros.TabIndex = 6;
-            lblRegistros.Text = "Registros:";
-            lblRegistros.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblDatos
-            // 
-            lblDatos.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblDatos.BackColor = Color.White;
-            lblDatos.BorderStyle = BorderStyle.FixedSingle;
-            lblDatos.Location = new Point(721, 50);
-            lblDatos.Name = "lblDatos";
-            lblDatos.Size = new Size(43, 23);
-            lblDatos.TabIndex = 7;
-            lblDatos.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Codigo
             // 
@@ -279,6 +234,51 @@
             Fec_Registro.HeaderText = "F. Registro";
             Fec_Registro.Name = "Fec_Registro";
             Fec_Registro.ReadOnly = true;
+            // 
+            // lblFiltro
+            // 
+            lblFiltro.BackColor = Color.DimGray;
+            lblFiltro.BorderStyle = BorderStyle.FixedSingle;
+            lblFiltro.ForeColor = Color.White;
+            lblFiltro.Location = new Point(36, 50);
+            lblFiltro.Name = "lblFiltro";
+            lblFiltro.Size = new Size(163, 23);
+            lblFiltro.TabIndex = 5;
+            lblFiltro.Text = "Filtro de Datos por Apellido:";
+            lblFiltro.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // txtFiltro
+            // 
+            txtFiltro.Location = new Point(196, 50);
+            txtFiltro.Name = "txtFiltro";
+            txtFiltro.Size = new Size(200, 23);
+            txtFiltro.TabIndex = 0;
+            txtFiltro.TextChanged += txtFiltro_TextChanged;
+            // 
+            // lblRegistros
+            // 
+            lblRegistros.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblRegistros.BackColor = Color.DimGray;
+            lblRegistros.BorderStyle = BorderStyle.FixedSingle;
+            lblRegistros.ForeColor = Color.White;
+            lblRegistros.Location = new Point(656, 50);
+            lblRegistros.Margin = new Padding(3, 0, 0, 0);
+            lblRegistros.Name = "lblRegistros";
+            lblRegistros.Size = new Size(65, 23);
+            lblRegistros.TabIndex = 6;
+            lblRegistros.Text = "Registros:";
+            lblRegistros.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblDatos
+            // 
+            lblDatos.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblDatos.BackColor = Color.White;
+            lblDatos.BorderStyle = BorderStyle.FixedSingle;
+            lblDatos.Location = new Point(721, 50);
+            lblDatos.Name = "lblDatos";
+            lblDatos.Size = new Size(43, 23);
+            lblDatos.TabIndex = 7;
+            lblDatos.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ClienteMan01
             // 

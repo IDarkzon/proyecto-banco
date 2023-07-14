@@ -37,7 +37,7 @@ namespace ProyBanco_GUI.EmpleadoGUI
         private void CargarDatos(string strFiltro)
         {
             dtv = new DataView(objEmpleadoBL.ListarEmpleado());
-            dtv.RowFilter = "Nombre like '%" + strFiltro + "%'";
+            dtv.RowFilter = "[Apellido Paterno] like '%" + strFiltro + "%'";
             dtgDatos.DataSource = dtv;
             lblDatos.Text = dtgDatos.Rows.Count.ToString();
         }
@@ -95,7 +95,5 @@ namespace ProyBanco_GUI.EmpleadoGUI
         {
             this.Close();
         }
-
-
     }
 }

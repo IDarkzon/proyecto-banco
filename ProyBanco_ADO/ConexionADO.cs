@@ -6,8 +6,7 @@ namespace ProyBanco_ADO
     {
         public string GetCnx()
         {
-            string strCnx =
-                ConfigurationManager.ConnectionStrings["Banco"].ConnectionString;
+            string strCnx = ConfigurationManager.ConnectionStrings["Banco"].ConnectionString;
             if (object.ReferenceEquals(strCnx, string.Empty))
             {
                 return string.Empty;

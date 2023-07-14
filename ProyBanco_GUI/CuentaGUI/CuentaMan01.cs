@@ -37,7 +37,7 @@ namespace ProyBanco_GUI.CuentaGUI
         private void CargarDatos(string strFiltro)
         {
             dtv = new DataView(objCuentaBL.ListarCuenta());
-            dtv.RowFilter = "[Nombre Cliente] like '%" + strFiltro + "%'";
+            dtv.RowFilter = "[Apellido Paterno] like '%" + strFiltro + "%'";
             dtgDatos.DataSource = dtv;
             lblDatos.Text = dtgDatos.Rows.Count.ToString();
         }
