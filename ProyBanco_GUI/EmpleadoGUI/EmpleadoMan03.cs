@@ -26,8 +26,7 @@ namespace ProyBanco_GUI.EmpleadoGUI
         }
 
         public String Codigo { get; set; }
-        public Byte[] fotoOriginal;
-        Boolean flag;
+        Boolean flag = false;
 
         private void EmpleadoMan03_Load(object sender, EventArgs e)
         {
@@ -37,6 +36,7 @@ namespace ProyBanco_GUI.EmpleadoGUI
 
                 // Cargar foto
                 objEmpleadoBE = objEmpleadoBL.ConsultarEmpleado(Codigo);
+                objEmpleadoBE_Temp = objEmpleadoBL.ConsultarEmpleado(Codigo);
 
                 if (objEmpleadoBE.Img_Emp.Length == 0)
                 {
@@ -46,17 +46,12 @@ namespace ProyBanco_GUI.EmpleadoGUI
                 {
                     MemoryStream ms = new MemoryStream(objEmpleadoBE.Img_Emp);
                     pbFoto.Image = Image.FromStream(ms);
-                    fotoOriginal = objEmpleadoBE.Img_Emp;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
-            // Mostrar datos del empleado
-            objEmpleadoBE = objEmpleadoBL.ConsultarEmpleado(Codigo);
-            objEmpleadoBE_Temp = objEmpleadoBL.ConsultarEmpleado(Codigo);
 
             lblCodigoIng.Text = objEmpleadoBE.Cod_Emp;
             txtNombre.Text = objEmpleadoBE.Nom_Emp;
@@ -153,7 +148,8 @@ namespace ProyBanco_GUI.EmpleadoGUI
                     txtDocumento.Text.Trim() != objEmpleadoBE_Temp.Num_doc_Emp ||
                     tipoDocumento != objEmpleadoBE_Temp.Tip_doc_Emp ||
                     Id_Ubigeo != objEmpleadoBE_Temp.Id_Ubigeo ||
-                    Convert.ToInt16(chkActivo.Checked) != objEmpleadoBE_Temp.Est_Emp)
+                    Convert.ToInt16(chkActivo.Checked) != objEmpleadoBE_Temp.Est_Emp ||
+                    flag)
             {
                 // Hay cambios
                 return false;
@@ -260,18 +256,13 @@ namespace ProyBanco_GUI.EmpleadoGUI
                 objEmpleadoBE.Id_Ubigeo = cboDepartamento.SelectedValue.ToString() + cboProvincia.SelectedValue.ToString() + cboDistrito.SelectedValue.ToString();
                 objEmpleadoBE.Est_Emp = Convert.ToInt16(chkActivo.Checked);
 
-                // Imagen
-                //System.IO.MemoryStream ms = new System.IO.MemoryStream();
-                //pbFoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                //objEmpleadoBE.Img_Emp = ms.GetBuffer();
-
                 if (flag)
                 {
                     objEmpleadoBE.Img_Emp = File.ReadAllBytes(openFileDialog1.FileName);
                 }
                 else
                 {
-                    objEmpleadoBE.Img_Emp = fotoOriginal;
+                    objEmpleadoBE.Img_Emp = objEmpleadoBE_Temp.Img_Emp;
                 }
 
                 // Auditoría
@@ -326,13 +317,6 @@ namespace ProyBanco_GUI.EmpleadoGUI
         {
             try
             {
-                //OpenFileDialog objOpenFileDialog = new OpenFileDialog();
-                //objOpenFileDialog.Filter = "Archivos de imagen (*.jpg, *.png) | *.jpg; *.png";
-                //if (objOpenFileDialog.ShowDialog() == DialogResult.OK)
-                //{
-                //    pbFoto.Image = Image.FromFile(objOpenFileDialog.FileName);
-                //}
-
                 openFileDialog1.FileName = String.Empty;
                 openFileDialog1.Multiselect = false;
                 openFileDialog1.Filter = "Archivos de imagen (*.jpg, *.png) | *.jpg; *.png";
