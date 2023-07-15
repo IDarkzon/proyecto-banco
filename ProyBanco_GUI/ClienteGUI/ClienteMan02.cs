@@ -24,6 +24,13 @@ namespace ProyBanco_GUI.ClienteGUI
             InitializeComponent();
         }
 
+        public ClienteMan02(string clienteDNI)
+        {
+            InitializeComponent();
+
+            txtDocumento.Text = clienteDNI;
+        }
+
         #region Configuración estética
         private void btnSalir_MouseEnter(object sender, EventArgs e)
         {

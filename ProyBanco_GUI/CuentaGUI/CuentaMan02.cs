@@ -1,16 +1,22 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyBanco_ADO;
 // Otros...
 using ProyBanco_BE;
 using ProyBanco_BL;
+using ProyBanco_GUI.ClienteGUI;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProyBanco_GUI.CuentaGUI
 {
@@ -18,6 +24,9 @@ namespace ProyBanco_GUI.CuentaGUI
     {
         CuentaBE objCuentaBE = new CuentaBE();
         CuentaBL objCuentaBL = new CuentaBL();
+        ClienteBE objClienteBE = new ClienteBE();
+        ClienteBL objClienteBL = new ClienteBL();
+        AgenciaBL objAgenciaBL = new AgenciaBL();
 
         public CuentaMan02()
         {
@@ -38,7 +47,17 @@ namespace ProyBanco_GUI.CuentaGUI
 
         private void CuentaMan02_Load(object sender, EventArgs e)
         {
-
+            try
+            {   
+                cboAgencia.DataSource = objAgenciaBL.ListarAgencia();
+                cboAgencia.ValueMember = "Codigo Agencia";
+                cboAgencia.DisplayMember = "Codigo Agencia";
+                cboAgencia.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -48,22 +67,12 @@ namespace ProyBanco_GUI.CuentaGUI
                 // Validaciones
                 if (txtCodCli.Text.Trim() == String.Empty)
                 {
-                    throw new Exception("El Código del cliente es obligatorio.");
+                    throw new Exception("El DNI del cliente es obligatorio.");
                 }
 
-                if (txtCodCli.Text.Trim().Length < 4 || txtCodCli.Text.Trim().Length > 4)
+                if (txtCodCli.Text.Trim().Length < 8 || txtCodCli.Text.Trim().Length > 8)
                 {
-                    throw new Exception("El Código del Cliente debe tener 4 Caracteres.");
-                }
-
-                if (txtCodAge.Text.Trim() == String.Empty)
-                {
-                    throw new Exception("El Código de la Agencia es obligatorio.");
-                }
-
-                if (txtCodAge.Text.Trim().Length < 4 || txtCodAge.Text.Trim().Length > 4)
-                {
-                    throw new Exception("El Código de la Agencia debe tener 4 Caracteres.");
+                    throw new Exception("El DNI del Cliente debe tener 8 Caracteres.");
                 }
 
                 // Definición
@@ -87,16 +96,34 @@ namespace ProyBanco_GUI.CuentaGUI
                     tipoCuenta = 2;
                 }
 
-
-
                 // Insertamos
                 objCuentaBE.Tip_Mon = tipoMoneda;
                 objCuentaBE.Sal_Cuen = Convert.ToSingle(mskSaldo.Text.Trim());
                 objCuentaBE.Tipo = tipoCuenta;
                 objCuentaBE.Fec_Aper = DateTime.Today;
-                objCuentaBE.Cod_Cli = txtCodCli.Text.Trim();
-                objCuentaBE.Cod_Age = txtCodAge.Text.Trim();
-                objCuentaBE.Est_Cuen = Convert.ToInt16(chkActivo.Checked); ;
+
+                objClienteBE = objClienteBL.ConsultarClienteDNI(txtCodCli.Text.Trim());
+
+                if (objClienteBE.Num_doc_Cli == null)
+                {
+                    DialogResult vrpta;
+                    vrpta = MessageBox.Show("El DNI del cliente no existe, ¿Quiere ingresarlo?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (vrpta == DialogResult.Yes)
+                    {
+                        ClienteMan02 frmClienteMan = new ClienteMan02(txtCodCli.Text.Trim());
+                        frmClienteMan.ShowDialog();
+
+                        return;
+                    } else
+                    {
+                        return;
+                    }
+                }
+
+                //Insertamos
+                objCuentaBE.Cod_Age = cboAgencia.SelectedValue.ToString();
+                objCuentaBE.Cod_Cli = objClienteBE.Cod_Cli;
+                objCuentaBE.Est_Cuen = Convert.ToInt16(chkActivo.Checked);
 
                 objCuentaBE.Usu_Registro = clsCredenciales.Usuario;
 

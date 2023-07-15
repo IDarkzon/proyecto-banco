@@ -31,7 +31,6 @@
             lblCodCli = new Label();
             txtCodCli = new TextBox();
             lblCodAge = new Label();
-            txtCodAge = new TextBox();
             lblSaldo = new Label();
             btnCerrar = new Button();
             groupBox1 = new GroupBox();
@@ -45,6 +44,7 @@
             optAhorro = new RadioButton();
             optCorriente = new RadioButton();
             mskSaldo = new MaskedTextBox();
+            cboAgencia = new ComboBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -54,17 +54,16 @@
             lblCodCli.AutoSize = true;
             lblCodCli.Location = new Point(49, 105);
             lblCodCli.Name = "lblCodCli";
-            lblCodCli.Size = new Size(108, 15);
+            lblCodCli.Size = new Size(89, 15);
             lblCodCli.TabIndex = 1;
-            lblCodCli.Text = "Código del Cliente:";
+            lblCodCli.Text = "DNI del Cliente:";
             // 
             // txtCodCli
             // 
-            txtCodCli.Location = new Point(177, 102);
-            txtCodCli.MaxLength = 4;
+            txtCodCli.Location = new Point(158, 102);
+            txtCodCli.MaxLength = 8;
             txtCodCli.Name = "txtCodCli";
-            txtCodCli.PlaceholderText = "C001";
-            txtCodCli.Size = new Size(82, 23);
+            txtCodCli.Size = new Size(101, 23);
             txtCodCli.TabIndex = 2;
             // 
             // lblCodAge
@@ -75,15 +74,6 @@
             lblCodAge.Size = new Size(123, 15);
             lblCodAge.TabIndex = 3;
             lblCodAge.Text = "Código de la Agencia:";
-            // 
-            // txtCodAge
-            // 
-            txtCodAge.Location = new Point(177, 153);
-            txtCodAge.MaxLength = 4;
-            txtCodAge.Name = "txtCodAge";
-            txtCodAge.PlaceholderText = "A001";
-            txtCodAge.Size = new Size(82, 23);
-            txtCodAge.TabIndex = 4;
             // 
             // lblSaldo
             // 
@@ -226,8 +216,18 @@
             mskSaldo.Location = new Point(110, 235);
             mskSaldo.Mask = "99999.99";
             mskSaldo.Name = "mskSaldo";
+            mskSaldo.RightToLeft = RightToLeft.No;
             mskSaldo.Size = new Size(100, 23);
             mskSaldo.TabIndex = 6;
+            // 
+            // cboAgencia
+            // 
+            cboAgencia.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboAgencia.FormattingEnabled = true;
+            cboAgencia.Location = new Point(177, 153);
+            cboAgencia.Name = "cboAgencia";
+            cboAgencia.Size = new Size(82, 23);
+            cboAgencia.TabIndex = 13;
             // 
             // CuentaMan02
             // 
@@ -235,6 +235,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(580, 450);
             ControlBox = false;
+            Controls.Add(cboAgencia);
             Controls.Add(mskSaldo);
             Controls.Add(groupBox2);
             Controls.Add(btnSalir);
@@ -243,7 +244,6 @@
             Controls.Add(groupBox1);
             Controls.Add(btnGuardar);
             Controls.Add(btnCerrar);
-            Controls.Add(txtCodAge);
             Controls.Add(txtCodCli);
             Controls.Add(lblSaldo);
             Controls.Add(lblCodAge);
@@ -279,5 +279,6 @@
         private RadioButton optAhorro;
         private RadioButton optCorriente;
         private MaskedTextBox mskSaldo;
+        private ComboBox cboAgencia;
     }
 }

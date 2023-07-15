@@ -24,6 +24,11 @@ namespace ProyBanco_BL
             return objClienteADO.ConsultarCliente(strCodigo);
         }
 
+        public ClienteBE ConsultarClienteDNI(String strDNI)
+        {
+            return objClienteADO.ConsultarClienteDNI(strDNI);
+        }
+
         public Boolean InsertarCliente(ClienteBE objClienteBE)
         {
             return objClienteADO.InsertarCliente(objClienteBE);

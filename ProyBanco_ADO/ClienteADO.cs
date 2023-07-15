@@ -86,6 +86,54 @@ namespace ProyBanco_ADO
             }
         }
 
+        public ClienteBE ConsultarClienteDNI(String strDNI)
+        {
+            try
+            {
+                ClienteBE objClienteBE = new ClienteBE();
+
+                cnx.ConnectionString = MiConexion.GetCnx();
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_ConsultarClienteDNI";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@DNI", strDNI);
+                cnx.Open();
+
+                dtr = cmd.ExecuteReader();
+
+                if (dtr.HasRows == true)
+                {
+                    dtr.Read();
+                    objClienteBE.Cod_Cli = dtr["Codigo"].ToString();
+                    objClienteBE.Nom_Cli = dtr["Nombre"].ToString();
+                    objClienteBE.Ape_pat_Cli = dtr["Apellido_Paterno"].ToString();
+                    objClienteBE.Ape_mat_Cli = dtr["Apellido_Materno"].ToString();
+                    objClienteBE.Num_doc_Cli = dtr["Numero_Documento"].ToString();
+                    objClienteBE.Tip_doc_Cli = Convert.ToInt16(dtr["Tip_doc_Cli"]);
+                    objClienteBE.Fec_nac_Cli = Convert.ToDateTime(dtr["Fecha_Nacimiento"]);
+                    objClienteBE.Tel_Cli = dtr["Telefono"].ToString();
+                    objClienteBE.Cor_Cli = dtr["Correo"].ToString();
+                    objClienteBE.Dir_Cli = dtr["Direccion"].ToString();
+                    objClienteBE.Id_Ubigeo = dtr["Id_Ubigeo"].ToString();
+                    objClienteBE.Est_Cli = Convert.ToInt16(dtr["Est_Cli"]);
+                }
+                dtr.Close();
+                return objClienteBE;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                if (cnx.State == ConnectionState.Open)
+                {
+                    cnx.Close();
+                }
+            }
+        }
+
         public Boolean InsertarCliente(ClienteBE objClienteBE)
         {
             try
